@@ -1,11 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<?php $data=$this->session->flashdata('key');if($data):// print_r($data); 
 
-// foreach ($data['weekday'] as $each) { 
-//    echo $each;
-//  };
- endif; ?>
 <?php $stack = array(); foreach ($allBookingInfo as $each) { 
     array_push($stack, $each['c_name'] );
  };
