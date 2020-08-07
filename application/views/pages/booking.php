@@ -85,6 +85,16 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 <label>Email<?php if($bookingformdata['email_admin']==1){echo "*";} ?> <?php if($this->session->flashdata('emailIsNotCorrect')){  echo $this->session->flashdata('emailIsNotCorrect');} ?><?php if($this->session->flashdata('email_flash')){  echo $this->session->flashdata('email_flash');} ?></label>
                                 <input class="form-control" id="emailForSingle" name="email" value="<?php if(isset($data['email'])){ echo $data['email'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('email');}; ?>">
                             </div>
+							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+							<label >Vali sihtgrupp</label>
+                                <select  class="form-control arrow">
+								<option >Vali sihtgrupp</option>
+								<option >Koolinoored (alla 20a)</option>
+								<option >Täiskasvanud</option>
+								<option >Seeniorid (alates 63a)</option>
+								<option >Eripopulatsioon</option>
+								</select>
+                            </div>
                         </div>
 
                         <h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Asukoht ja sündmus / treeningu tüüp</h4>
@@ -192,6 +202,9 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 											</datalist>
 										</div>
 										</div>
+
+										
+
                                     </div>
                                     
                                     <?php if(isset($data['workoutDate'])){ for ($i = 1; $i<count($data['workoutDate']); $i++) { ?>
@@ -234,7 +247,9 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 											</datalist>
 											
 										</div>
+										
 								    	</div>
+										
 									<?php ;}}; ?>
 								
 
@@ -243,7 +258,64 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                     <a id="AddMoreFileBox" class="btn btn-custom text-white text-center py-2 px-4 pluss ml-3 ml-md-0"><p class="m-0 px-0 txt-lg txt-strong text-center align-items-center">Lisa veel üks kuupäev</p></a>
                                 </div>
                             </div>
+										
                         </div>
+						<div>
+                            <div>
+							
+                                <div id="InputsWrapper">
+                                    <div class="row d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningu ettevalmistamiseks kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+												
+											</div>
+										</div>
+										<div>
+											<p>h</p>
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="pl-2 form-control">
+										</div>
+										</div>
+										
+
+										
+
+                                    </div>
+
+									<div class="row  d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningujärgsele koristamisele kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+											</div>	
+											
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="pl-2 form-control">
+										</div>
+										</div>
+										
+
+										
+
+                                    </div>
+                                    
+                                    
+								
+
+                                </div>
+                       					
 
                         <h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Lisainfo (valikuline) </h4>
 						<div class="mt-4 px-md-5 mx-md-5">
@@ -310,6 +382,16 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
                                 <label>Email<?php if($bookingformdata['email_admin']==1){echo "*";} ?> <?php if($this->session->flashdata('emailIsNotCorrect')){  echo $this->session->flashdata('emailIsNotCorrect');} ?><?php if($this->session->flashdata('email_flash')){  echo $this->session->flashdata('email_flash');} ?></label>
                                 <input class="form-control" id="email" name="email" value="<?php if(isset($data['email'])){ echo $data['email'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('email');}; ?>">
+                            </div>
+							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+							<label >Vali sihtgrupp</label>
+                                <select  class="form-control arrow">
+								<option >Vali sihtgrupp</option>
+								<option >Koolinoored (alla 20a)</option>
+								<option >Täiskasvanud</option>
+								<option >Seeniorid (alates 63a)</option>
+								<option >Eripopulatsioon</option>
+								</select>
                             </div>
                         </div>
 
