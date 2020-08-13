@@ -1,11 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<?php $data=$this->session->flashdata('key');if($data):// print_r($data); 
 
-// foreach ($data['weekday'] as $each) { 
-//    echo $each;
-//  };
- endif; ?>
 <?php $stack = array(); foreach ($allBookingInfo as $each) { 
     array_push($stack, $each['c_name'] );
  };
@@ -85,6 +80,18 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 <label>Email<?php if($bookingformdata['email_admin']==1){echo "*";} ?> <?php if($this->session->flashdata('emailIsNotCorrect')){  echo $this->session->flashdata('emailIsNotCorrect');} ?><?php if($this->session->flashdata('email_flash')){  echo $this->session->flashdata('email_flash');} ?></label>
                                 <input class="form-control" id="emailForSingle" name="email" value="<?php if(isset($data['email'])){ echo $data['email'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('email');}; ?>">
                             </div>
+						
+							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+							<label >Vali sihtgrupp</label>
+                                <select  class="form-control arrow">
+								<option >Vali sihtgrupp</option>
+								<option >Koolinoored (alla 20a)</option>
+								<option >Täiskasvanud</option>
+								<option >Seeniorid (alates 63a)</option>
+								<option >Eripopulatsioon</option>
+								</select>
+                            </div>
+                                    
                         </div>
 						<div class="row d-flex mt-2 px-md-5 mx-md-5">
 						<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
