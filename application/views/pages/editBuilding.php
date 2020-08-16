@@ -128,70 +128,65 @@
 								</div>
 								<div class="row d-flex p-0 mt-4 px-md-5 mx-5">
 								</div>
-								<div id="showOrHide">
-									<div class="bg-grey py-2">
+								
+									<div class="bg-grey py-2" id="üldsätted">
 
 									<h4 class="pt-2 txt-xl px-5 mx-5">Tavakasutaja broneeringuvormi vaikeseaded <b data-tooltip="Tavakasutajate broneering veel ei tööta ja see osa on arendamisel"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></b></h4>
 									<div class="row d-flex p-0 m-4 px-md-5 mx-5">
 										Luba tavakasutajate broneerimine  &nbsp;&nbsp;	<label><input type="checkbox" id="allowUserBooking" <?php if($bookingformdata['allow_booking']){echo 'checked';} ?> name="allowBooking" value="<?php echo $bookingformdata['allow_booking'] ?>"><span></span></label>
 									</div>
-
+									<div id="showOrHide">
 										<u><h4 class="px-5 mx-5">Üldsätted</h4></u>
 										<p class="pt-2 txt-lg px-5 mx-5">Kohustuslikud väljad tavakasutajatele: </p>
-										<div class="col-sm-8">
-											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill mt-3 mx-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<div class="col-sm-7 ml-auto">
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
 											</svg>
-											&nbsp;&nbsp;
-											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-eye mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
-												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-											</svg>
 										</div>
-										<div class="col-sm-12">
+										<div class="col-sm-7">
 											<div class="row d-flex p-0 mt-4 px-md-5 mx-5">
-												Klubi nimi/korraldaja  &nbsp;&nbsp;	<label class="col" style="text-align:center"><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+												Klubi nimi/korraldaja  &nbsp;&nbsp;	<label class="ml-auto"><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
 											</div>
 											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-												Kontaktisik  &nbsp;&nbsp;	<label class="col" style="text-align:center"><input type="checkbox" class="form-check-input"<?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="name_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label>
+												Kontaktisik  &nbsp;&nbsp;	<label class="ml-auto"><input type="checkbox" class="form-check-input"<?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="name_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label>
 											</div>
 											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-												Telefon  &nbsp;&nbsp;	<label><input type="checkbox"  <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label>
+												Telefon  &nbsp;&nbsp;	<label class="ml-auto"><input type="checkbox"  <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label>
 											</div>
 											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-												E-mail &nbsp;&nbsp;	<label><input type="checkbox"  <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label>
+												E-mail &nbsp;&nbsp;	<label class="ml-auto"><input type="checkbox"  <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label>
 											</div>
 											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-												Ruumi kasutamise eesmärk  &nbsp;&nbsp;	<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label>
+												Ruumi kasutamise eesmärk  &nbsp;&nbsp;	<label class="ml-auto"><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label>
 											</div>
 										</div>
 										<p class="pt-4 txt-lg px-5 mx-5">Maksevõimalused Teie asutuses: </p>
 										<div class="col-sm-8">
 										<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Sularaha kohapeal tasudes
+											<label><input type="checkbox"  <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;	 Sularaha kohapeal tasudes
 										</div>
 										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Pangakaart kohapeal tasudes
+											<label><input type="checkbox" <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp; Pangakaart kohapeal tasudes
 										</div>
 										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Arve
+											<label><input type="checkbox"  <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;	 Arve
 										</div>
 										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Ettemaks
+											<label><input type="checkbox"  <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;	 Ettemaks
 										</div>
 										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Muu
+											<label><input type="checkbox"  <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;	 Muu
 										</div>
 										</div>
 										<p class="pt-4 txt-lg px-5 mx-5">Kasutustingimused: </p>
 										<div class="col-sm-8">
 										<div class="row d-flex p-0 mt-3 px-md-5 mx-5 col-12">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Soovin, et klient peab nõustuma kasutustingimustega
+											<label><input type="checkbox"  <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;	 Soovin, et klient peab nõustuma kasutustingimustega
 										</div>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia oma asutuse kasutustingimused: </p>
 										
-										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
+										<div class="form-label-group mt-2 px-5 mx-5 col-12">
 											<div class="input-group">
 												<textarea class="form-control"></textarea>
 											</div>
@@ -200,15 +195,145 @@
 									</div>
 
 									
-									<div class="py-2 bg-light">
+									<div class="py-2 bg-light" id="uhekordse satted">
 
 									
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Ühekordse treeningu sätted</h4></u>
-										<div class="col-sm-12">
-											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill col-10 mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<div class="col-sm-2 mx-auto">
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill ml-12 mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+											</svg>
+											&nbsp;&nbsp;
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-eye mt-3 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+											</svg>
+										</div>
+										<div class="col-sm-9">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Inimeste arv  &nbsp;&nbsp;	
+												<label><input type="checkbox" type="checkbox" class="form-check-input" <?php {echo 'checked';} ?>><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php {echo 'checked';} ?>><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Vanusegrupp  &nbsp;&nbsp;	
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Treeningu ettevalmistus aeg  &nbsp;&nbsp;	
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Treeningujärgne koristus aeg  &nbsp;&nbsp;	
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Lepingu andmed  &nbsp;&nbsp;	
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+												
+											</div>
+												<div class="col-sm-12 ml-5">
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+												</div>
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+												</div>
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+												</div>
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="contactname_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="contactname_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label>
+												</div>
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label>
+												</div>
+												<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+													Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label> &nbsp;&nbsp;
+													<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label>
+												</div>
+												</div>
+											
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Maksmisviis  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Arve saaja andmed  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="col-sm-12 ml-5">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="contactname_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['contactname_user']){echo 'checked';} ?> name="contactname_user" value="<?php echo $bookingformdata['contactname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['email_user']){echo 'checked';} ?> name="email_user" value="<?php echo $bookingformdata['email_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['phone_user']){echo 'checked';} ?> name="phone_user" value="<?php echo $bookingformdata['phone_user'] ?>"><span></span></label>
+											</div>
+											</div>
+											
+											
+										</div>
+										
+										<div class="col-sm-8">
+										<div class="row d-flex p-0 mt-4 px-md-5 mx-5 col-12">
+											 <p class="txt-lg"> Üldinfo ruumi kohta </p> <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5 color-black" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></b>
+											 &nbsp;&nbsp; <label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label>
+										</div>
+										
+										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
+										
+										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
+											<div class="input-group">
+												<textarea class="form-control"></textarea>
+											</div>
+										</div>
+										</div>
+
+									</div>	
+
+									<div class="py-2 bg-grey" id="hooajalise satted">
+
+									
+									
+
+										<u><h4 class="pt-3 px-5 mx-5">Hooajalise treeningu sätted</h4></u>
+										<div class="col-sm-12">
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill ml-12 mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+											</svg>
+											&nbsp;&nbsp;
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-eye mt-3 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
 											</svg>
 										</div>
 										<div class="col-sm-12">
@@ -232,42 +357,206 @@
 												Lepingu andmed  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
 												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
 											</div>
+											<div class="col-sm-12 ml-5">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Maksmisviis  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Arve saaja andmed  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="col-sm-12 ml-5">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											</div>
 											
 											
-										</div>
-										<p class="pt-4 txt-lg px-5 mx-5">Maksevõimalused Teie asutuses: </p>
-										<div class="col-sm-8">
-										<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Sularaha kohapeal tasudes
-										</div>
-										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Pangakaart kohapeal tasudes
-										</div>
-										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Arve
-										</div>
-										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Ettemaks
-										</div>
-										<div class="row d-flex p-0 mt-2 px-md-5 mx-5">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Muu
-										</div>
-										</div>
-										<p class="pt-4 txt-lg px-5 mx-5">Kasutustingimused: </p>
-										<div class="col-sm-8">
-										<div class="row d-flex p-0 mt-3 px-md-5 mx-5 col-12">
-											<label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> &nbsp;&nbsp;	 Soovin, et klient peab nõustuma kasutustingimustega
 										</div>
 										
-										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia oma asutuse kasutustingimused: </p>
+										
+										<div class="col-sm-8">
+										<div class="row d-flex p-0 mt-4 px-md-5 mx-5 col-12">
+											 <p class="txt-lg"> Üldinfo ruumi kohta </p> &nbsp;&nbsp; <label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> 
+										</div>
+										
+										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
 										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
 											<div class="input-group">
 												<textarea class="form-control"></textarea>
 											</div>
 										</div>
+										</div>
 
-									</div>	
+									</div>
+									<div class="py-2 bg-light" id="sundmuse satted">
+
+									
+									
+
+										<u><h4 class="pt-3 px-5 mx-5">Sündmuse sätted</h4></u>
+										<div class="col-sm-12">
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill ml-12 mt-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+											</svg>
+											&nbsp;&nbsp;
+											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-eye mt-3 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+											</svg>
+										</div>
+										<div class="col-sm-12">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Inimeste arv  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Vanusegrupp  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Sündmuse olek (avalik, privaatne)  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Sündmuse ettevalmistus aeg  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Sündmuse koristus aeg  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Lepingu andmed  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="col-sm-12 ml-5">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Maksmisviis  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Arve saaja andmed  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="col-sm-12 ml-5">
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Ettevõtte- või eraisiku nimi  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Registrikood/isikukood  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Aadress  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Kontaktisik  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Email  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											<div class="row d-flex p-0 mt-3 px-md-5 mx-5">
+												Telefon  &nbsp;&nbsp;	<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label> &nbsp;&nbsp;
+												<label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label>
+											</div>
+											</div>
+											
+											
+										</div>
+										
+										<div class="col-sm-8">
+										<div class="row d-flex p-0 mt-4 px-md-5 mx-5 col-12">
+											 <p class="txt-lg"> Üldinfo ruumi kohta </p> &nbsp;&nbsp; <label><input type="checkbox"  <?php if($bookingformdata['type_user']){echo 'checked';} ?> name="type_user" value="<?php echo $bookingformdata['type_user'] ?>"><span></span></label> 
+										</div>
+										
+										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
+										
+										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
+											<div class="input-group">
+												<textarea class="form-control"></textarea>
+											</div>
+										</div>
+										</div>
+
+									</div>		
 									
 
 								</div>
@@ -311,8 +600,6 @@ $( document ).ready(function() {
 	// 		$( "#showOrHide" ).hide();
 	// 	}
 	// });
-
-
 
 
 	var counter=1;
