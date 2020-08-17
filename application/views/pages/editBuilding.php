@@ -139,7 +139,7 @@
 										<u><h4 class="px-5 mx-5">Üldsätted</h4></u>
 										<p class="pt-2 txt-lg px-5 mx-5">Kohustuslikud väljad tavakasutajatele: </p>
 										<div class="col-sm-7 ml-auto mt-3">
-											<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
 											</svg>
 										</div>
@@ -186,13 +186,14 @@
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia oma asutuse kasutustingimused: </p>
 										
-										<div class="form-label-group mt-2 px-5 mx-5 col-12">
+										</div>
+										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
 											<div class="input-group">
 												<textarea class="form-control"></textarea>
 											</div>
 										</div>
 										
-									</div>
+									
 
 									
 									<div class="py-2 bg-light" id="uhekordse satted">
@@ -201,7 +202,8 @@
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Ühekordse treeningu sätted</h4></u>
-										<table class="table table-sm mt-5 col-sm-7 w-auto mx-5 px-5 ">
+										<div class="mt-4 col-sm-7 w-auto mx-5 px-5 ">
+										<table class="table table-sm" style="border-top: hidden">
 										<tbody>
 										<tr>
 											<td class="p-0"></td>
@@ -331,6 +333,7 @@
 										
 										</tbody>
 										</table>
+										</div>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
@@ -349,7 +352,8 @@
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Hooajalise treeningu sätted</h4></u>
-										<table class="table table-sm mt-3 col-sm-7 w-auto mx-5 px-5">
+										<div class="mt-5 col-sm-7 w-auto mx-5 px-5 ">
+										<table class="table table-sm">
 											<tbody>
 										<tr>
 											<td class="p-0"></td>
@@ -476,6 +480,7 @@
 										
 										</tbody>
 										</table>
+										</div>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
@@ -495,7 +500,8 @@
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Sündmuse sätted</h4></u>
-										<table class="table table-sm mt-3 col-sm-7 w-auto mx-5 px-5">
+										<div class="mt-4 col-sm-7 w-auto mx-5 px-5 ">
+										<table class="table table-sm" style="border-top: hidden">
 											<tbody>
 										<tr>
 											<td class="p-0"></td>
@@ -627,6 +633,7 @@
 										
 										</tbody>
 										</table>
+										</div>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
