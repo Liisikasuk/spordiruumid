@@ -1,7 +1,7 @@
 <?php if($this->session->userdata('roleID')==='2'||$this->session->userdata('roleID')==='3'||$this->session->userdata('roleID')==='1'){?>
  <div class="container">
 	<div class="container-md mx-auto mt-5">
-		<div class="form-bg">
+		<div class="bg-white form-bg">
 
             <div class="d-flex mb-5">
                 <ul class="nav nav-tabs nav-justified col-12 bg-grey p-0">
@@ -89,7 +89,7 @@
 										<a class="txt-xl link-deco align-self-center py-0 pr-5 mr-2" href="<?php echo base_url(); ?>building/view/<?php  print_r($this->session->userdata['building']);?>">Katkesta</a>
 											<button type="submit" class="btn btn-custom col-md-5 text-white txt-xl">Salvesta muudatused</button>
 									</div>
-							</form>
+								
 
 							</div>
 							<div id="broneering" class="tab-pane center bg-white">
@@ -129,7 +129,7 @@
 								<div class="row d-flex p-0 mt-4 px-md-5 mx-5">
 								</div>
 								
-								<div class="py-2" id="üldsätted" style="background-color:#F8F8F8">
+								<div id="üldsätted" style="background-color:#F8F8F8">
 
 									<h4 class="pt-2 txt-xl px-5 mx-5">Tavakasutaja broneeringuvormi vaikeseaded <b data-tooltip="Tavakasutajate broneering veel ei tööta ja see osa on arendamisel"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></b></h4>
 									<div class="row d-flex p-0 m-4 px-md-5 mx-5">
@@ -209,19 +209,21 @@
 										<tbody>
 										<tr>
 											<td class="p-0"></td>
-											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+											</svg>
+											</td>
+											
+											<td class="p-1">
+											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
 												
 											</svg>
 											</td>
 											
-											<td class="p-1">
-											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
-												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-											</svg>
-											</td>
 										</tr>
+										
 											
 											<tr>
 												<td>Inimeste arv</td>	
@@ -291,6 +293,32 @@
 													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Sularahas kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Pangakaart kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Arvega</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Ettemaks</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Muu</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												
 												<tr>
 													<td>Arve saaja andmed</td>
 													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
@@ -361,16 +389,16 @@
 											<tbody>
 										<tr>
 											<td class="p-0"></td>
-											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-												
+											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
 											</svg>
 											</td>
 											
 											<td class="p-1">
-											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
-												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+												
 											</svg>
 											</td>
 										</tr>
@@ -435,6 +463,31 @@
 											
 												<tr>
 													<td>Maksmisviis</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Sularahas kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Pangakaart kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Arvega</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Ettemaks</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Muu</td>
 													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												</tr>
@@ -508,19 +561,19 @@
 											<table class="table table-sm" style="border-top: hidden">
 												<tbody>
 											<tr>
-											<td class="p-0"></td>
-											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+												<td class="p-0"></td>
+												<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
+													<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+												</svg>
+												</td>
 												
-											</svg>
-											</td>
-											
-											<td class="p-1">
-											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/>
-												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-											</svg>
-											</td>
+												<td class="p-1">
+												<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+													
+												</svg>
+												</td>
 											</tr>
 											<tr>
 												<td>Inimeste arv</td>	
@@ -588,6 +641,31 @@
 											
 												<tr>
 													<td>Maksmisviis</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Sularahas kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Pangakaart kohapeal tasudes</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Arvega</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Ettemaks</td>
+													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
+													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+												</tr>
+												<tr>
+													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Muu</td>
 													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												</tr>
@@ -661,10 +739,10 @@
 							<div class="d-flex justify-content-end my-5 px-5 mx-5">
 										<a class="txt-xl link-deco align-self-center py-0 pr-5 mr-2" href="<?php echo base_url(); ?>building/view/<?php  print_r($this->session->userdata['building']);?>">Katkesta</a>
 											<button type="submit" class="btn btn-custom col-md-5 text-white txt-xl">Salvesta muudatused</button>
-									</div>
-							</form>
 							</div>
-					 </div>
+				
+							
+			 </div>
 
         </div>
     </div>
