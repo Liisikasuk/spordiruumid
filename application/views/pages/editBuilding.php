@@ -92,7 +92,7 @@
 							</form>
 
 							</div>
-							<div id="broneering" class="tab-pane center">
+							<div id="broneering" class="tab-pane center bg-white">
 								<?php echo form_open('building/updateBookingSettings', array('id' => 'changebookingSettings')); ?>
 								<h4 class="pt-2 txt-xl px-5 mx-5">Administraatori broneeringuvormi vaikeseaded</h4>
 								<div class="row d-flex p-0 m-4 px-md-5 mx-5">
@@ -129,7 +129,7 @@
 								<div class="row d-flex p-0 mt-4 px-md-5 mx-5">
 								</div>
 								
-								<div class="bg-grey py-2" id="üldsätted">
+								<div class="py-2" id="üldsätted" style="background-color:#F8F8F8">
 
 									<h4 class="pt-2 txt-xl px-5 mx-5">Tavakasutaja broneeringuvormi vaikeseaded <b data-tooltip="Tavakasutajate broneering veel ei tööta ja see osa on arendamisel"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></b></h4>
 									<div class="row d-flex p-0 m-4 px-md-5 mx-5">
@@ -139,9 +139,11 @@
 										<u><h4 class="px-5 mx-5">Üldsätted</h4></u>
 										<p class="pt-2 txt-lg px-5 mx-5">Kohustuslikud väljad tavakasutajatele: </p>
 										<div class="col-sm-7 ml-auto mt-3">
-											<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-											</svg>
+										<svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+										</svg>
+										
+											
 										</div>
 										<div class="col-sm-7">
 											<div class="row d-flex p-0 mt-4 px-md-5 mx-5">
@@ -196,7 +198,7 @@
 									
 
 									
-									<div class="py-2 bg-light" id="uhekordse satted">
+									 <div class="py-2 bg-white" id="uhekordse satted">
 
 									
 									
@@ -220,11 +222,14 @@
 											</svg>
 											</td>
 										</tr>
+											
 											<tr>
 												<td>Inimeste arv</td>	
 												<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
+											
 											</tr>
+											
 											<tr>
 												<td>Vanusegrupp</td>
 												<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
@@ -248,7 +253,6 @@
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												
 											</tr>
-			
 												<tr>
 													<td> &nbsp;&nbsp;&nbsp;&nbsp; - Ettevõtte- või eraisiku nimi</td>
 													<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
@@ -280,7 +284,7 @@
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												</tr>
 											
-												
+											
 											
 												<tr>
 													<td>Maksmisviis</td>
@@ -344,16 +348,16 @@
 										</div>
 										</div>
 
-									</div>	
+									 </div>	
 
-									<div class="py-2 bg-grey" id="hooajalise satted">
+									 <div class="py-2" id="hooajalise satted" style="background-color:#F8F8F8">
 
 									
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Hooajalise treeningu sätted</h4></u>
 										<div class="mt-5 col-sm-7 w-auto mx-5 px-5 ">
-										<table class="table table-sm">
+										<table class="table table-sm" style="border-top: hidden">
 											<tbody>
 										<tr>
 											<td class="p-0"></td>
@@ -493,17 +497,17 @@
 										
 										
 
-									</div>
-									<div class="py-2 bg-light" id="sundmuse satted">
+									 </div>
+									 <div class="py-2 bg-white" id="sundmuse satted">
 
 									
 									
 
 										<u><h4 class="pt-3 px-5 mx-5">Sündmuse sätted</h4></u>
 										<div class="mt-4 col-sm-7 w-auto mx-5 px-5 ">
-										<table class="table table-sm" style="border-top: hidden">
-											<tbody>
-										<tr>
+											<table class="table table-sm" style="border-top: hidden">
+												<tbody>
+											<tr>
 											<td class="p-0"></td>
 											<td class="p-0"><svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-exclamation-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
@@ -517,7 +521,7 @@
 												<path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
 											</svg>
 											</td>
-										</tr>
+											</tr>
 											<tr>
 												<td>Inimeste arv</td>	
 												<td class="col-md-1"><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td> 
@@ -625,25 +629,25 @@
 											
 											
 										
-										<tr>
+												<tr>
 													<td>Üldinfo ruumi kohta <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></td>
 													<td class="col-md-1"></td>
 													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
 												</tr>
 										
-										</tbody>
-										</table>
-										</div>
-										
-										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
-										
-										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
-											<div class="input-group">
-												<textarea class="form-control"></textarea>
+											</tbody>
+											</table>
 											</div>
+										
+											<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
+										
+											<div class="form-label-group mt-2 pb-2 px-5 mx-5">
+												<div class="input-group">
+													<textarea class="form-control"></textarea>
+												</div>
+											</div>
+										
 										</div>
-										</div>
-
 									</div>		
 									
 
@@ -686,6 +690,22 @@ $( document ).ready(function() {
 	// 		$( "#showOrHide" ).show();
 	// 	}else{
 	// 		$( "#showOrHide" ).hide();
+	// 	}
+	// });
+
+	// if(!$('#allowContract').is(":checked")){
+	// 		$( "#show" ).hide();
+	// 	}
+
+	// $(':checkbox').click(function() {
+   	// 	value = +$(this).is( ':checked' );
+	// 	   $(this).val(value);
+
+	// 	if($('#allowContract').is(":checked")){
+	// 		console.log(value);
+	// 		$( "#show" ).show();
+	// 	}else{
+	// 		$( "#show" ).hide();
 	// 	}
 	// });
 
@@ -790,6 +810,10 @@ $( document ).ready(function() {
 
 
 
+});
+
+$(document).ready(function(){
+	$('[data-toggle="popover"]').popover();
 });
 
 
