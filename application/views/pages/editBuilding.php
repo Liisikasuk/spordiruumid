@@ -357,15 +357,13 @@
 											
 											
 										
-										<tr>
-													<td class="h5 mt-4">Üldinfo ruumi kohta <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></td>
-													<td class="col-md-1"></td>
-													<td><label><input type="checkbox" class="form-check-input" <?php if($bookingformdata['clubname_user']){echo 'checked';} ?> name="clubname_user" value="<?php echo $bookingformdata['clubname_user'] ?>"><span></span></label></td>
-												</tr>
+										
 										
 										</tbody>
 										</table>
 										</div>
+
+										<h3 class="pt-3 px-5 mx-5"><u>Üldinfo <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></u></h3>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
@@ -538,6 +536,8 @@
 										</tbody>
 										</table>
 										</div>
+										
+										<h3 class="pt-3 px-5 mx-5"><u>Üldinfo <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></u></h3>
 										
 										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
 										
@@ -717,13 +717,15 @@
 											</table>
 											</div>
 										
-											<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
+											<h3 class="pt-3 px-5 mx-5"><u>Üldinfo <b data-tooltip="Ruumi mahutavus, olemasolev varustus jne"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="3%"></u></h3>
 										
-											<div class="form-label-group mt-2 pb-2 px-5 mx-5">
-												<div class="input-group">
-													<textarea class="form-control"></textarea>
-												</div>
+										<p class="pt-3 txt-lg px-5 mx-5">Sisesta siia üldinfo tekst: </p>
+										
+										<div class="form-label-group mt-2 pb-2 px-5 mx-5">
+											<div class="input-group">
+												<textarea class="form-control"></textarea>
 											</div>
+										</div>
 										
 										</div>
 									</div>		
