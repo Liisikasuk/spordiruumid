@@ -117,12 +117,14 @@ class Fullcalendar extends CI_Controller {
 				{
 					$this->fullcalendar_model->delete_versions($this->input->post('timeID'));
 					$this->fullcalendar_model->delete_event($this->input->post('timeID'));
+					
 				}
 			}
 			
 
 		
 		}
+		
 	}
 
 	function deleteAllConnectedBookings()
