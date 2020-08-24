@@ -52,14 +52,51 @@
 
             <div class="tab-content">
                 <div id="kalender" class="tab-pane center <?php if(!isset($data['type'])){ echo 'active';}else if($data['type']==1){echo 'active';}; ?>">
-                    <u><h4 class="mx-5 mt-2"> Üldinfo: </h4></u>
-                    <p class="mx-5 col-9 mt-3 h5">
-                    Ruumi vahetamiseks valige sobiv ruum rippmenüüst:
-                    <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/chooseroom.jpg"></p>
-                    <p class="mx-5 col-9 mt-5 h5">
-                    Kõiki ruume saab korraga vaadata, kui vajutada lingile "Kõik ruumid":
-                    <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/allrooms.png">
-                    </p>
+                    <u><button><h4 class="mx-5 mt-2"> Üldinfo: </h4></button></u>
+                    <div id="manual" style="display:none">
+                        <p class="mx-5 col-10 mt-3 h5">
+                        Ruumi vahetamiseks valige sobiv ruum rippmenüüst:
+                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/chooseroom.jpg"></p>
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Kõiki ruume saab korraga vaadata, kui vajutada lingile "Kõik ruumid":
+                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/allrooms.png">
+                        </p>
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Tagasi kalendrisse saamiseks vajuta "Tagasi töökalendrisse":
+                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/backToCalendar.png">
+                        </p>
+                        <p class="mx-5 col-10 mt-4 h5">
+                        Tavakasutajad näevad avalikus kalendris ainult klubi nime ning ruumi kasutamise
+                        eesmärki (vasakpoolne pilt). Asutuse kasutajad näevad lisaks päringu aega, 
+                        broneeringu värvi ning broneeringu muutmise märki (parempoolne pilt):
+                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/calendarView.png">
+                        </p>
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Broneeringul klikkides avaneb vasakul modaalaken, kus  näeb broneeringuga seotud infot.
+                        Modaalaknas saab sakke kokku pakkida, kui nendel vajutada:
+                        
+                        </p><img class="mx-2 mt-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/modalwindowPacking.gif">
+                    </div>
+
+                    <u><h4 class="mx-5 mt-5"> Broneeringu tegemine: </h4></u>
+                        
+                        <p class="mx-5 col-10 mt-3 h5">
+                        Broneeringu tegemiseks valige hiirega otse kalendris sobiv kuupäev ja ajavahemik: </p>
+                        <img class="mx-2 mt-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
+                        <p class="mx-5 col-10 mt-5 h5">
+                        või vajutage üleval paremal olevat nuppu "Uus broneering". Peale seda viiakse Teid broneeringu
+                        tegemise lehele, kus saate valida millist broneeringut Te teha soovite, kas ühekordne,
+                        hooajaline või suletud:
+                        </p> <img class="mx-2 mt-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/chooseReservation.gif">
+                        
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Täitke väljad ja vajutage "Broneeri". Kattuvate aegade puhul antakse Teile 
+                        sellest teada:
+                        
+                        </p>
+                        <img class="mx-5 mt-3" src="<?php echo base_url(); ?>assets/img/overlapReservations.png">
+                        
+                
                 </div>
                 <div id="broneeringud" class="tab-pane center <?php if($data['type']==2){echo 'active';}; ?>">
                 <div class="mx-5 mt-2">
@@ -86,5 +123,26 @@
 		</div>
 	</div>
 </div>
+
+<script>
+//     $(function() {
+//   var navSelector = "#toc";
+//   var $myNav = $(navSelector);
+//   Toc.init($myNav);
+//   $("body").scrollspy({
+//     target: navSelector
+//   });
+// });
+
+$(document).ready(function(){
+    // hide form on page load
+    $('#myform').hide();
+
+    // when button is pressed
+    $('button').on('click',function(){  
+      $('#myform').show();
+   });
+});
+</script>
 
 
