@@ -93,6 +93,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             </div>
                                     
                         </div>
+						
 
                         <h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Asukoht ja sündmus / treeningu tüüp</h4>
                         <div class="row d-flex mt-4 px-md-5 mx-md-5">
@@ -252,6 +253,72 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             </div>
                         </div>
 
+						<div>
+							
+                                <div id="InputsWrapper">
+                                    <div class="row d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningu ettevalmistamiseks kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+												
+											</div>
+										</div>
+										<div class="mt-4">
+											<h5>h</h5>
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="form-control">
+										</div>
+										</div>
+										<div class="mt-4">
+											<h5>min</h5>
+										</div>
+										
+
+										
+
+                                    </div>
+
+									<div class="row  d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningujärgsele koristamisele kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+											</div>	
+											
+										</div>
+										<div class="mt-4">
+											<h5>h</h5>
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="form-control">
+										</div>
+										</div>
+										<div class="mt-4">
+											<h5>min</h5>
+										</div>
+										
+
+										
+
+                                    </div>
+                                    
+                                    
+								
+
+                                </div>
+                       		</div>
+
+											
                         <h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Lisainfo (valikuline) </h4>
 						<div class="mt-4 px-md-5 mx-md-5">
                             <div class="form-label-group pb-2 px-md-0 px-2">
@@ -319,6 +386,18 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 <input class="form-control" id="email" name="email" value="<?php if(isset($data['email'])){ echo $data['email'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('email');}; ?>">
                             </div>
                         </div>
+						<div class="row d-flex mt-2 px-md-5 mx-md-5">
+						<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+							<label >Vali sihtgrupp</label>
+                                <select  class="form-control arrow">
+								<option >Vali sihtgrupp</option>
+								<option >Koolinoored (alla 20a)</option>
+								<option >Täiskasvanud</option>
+								<option >Seeniorid (alates 63a)</option>
+								<option >Eripopulatsioon</option>
+								</select>
+                            </div>
+						</div>
 
 
                         <h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Asukoht ja sündmus / treeningu tüüp</h4>
@@ -530,6 +609,62 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 
 							</div>
 						</div>
+
+						<div>
+							
+                                <div id="InputsWrapper">
+                                    <div class="row d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningu ettevalmistamiseks kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+												
+											</div>
+										</div>
+										<div>
+											<p>h</p>
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="form-control">
+										</div>
+										</div>
+										
+
+										
+
+                                    </div>
+
+									<div class="row  d-flex align-items-center">
+										<div class="mt-2 txt-xl px-md-5 mx-md-5">
+											<label>Treeningujärgsele koristamisele kuluv aeg</label>
+										</div>
+
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+											<div>	
+												<input type="input" class="form-control">
+											</div>	
+											
+										</div>
+                                        <div class="col-4 col-sm-2 mt-3 txt-xl">
+										<div>	
+                                            <input type="input" class="form-control">
+										</div>
+										</div>
+										
+
+										
+
+                                    </div>
+                                    
+                                    
+								
+
+                                </div>
+                       		</div>
 						      
 						<?php if($this->session->flashdata('validationErrorMessageforPeriod')){  
 							echo  '<div class="row d-flex ml-3 px-md-5 mx-md-5">'.	$this->session->flashdata('validationErrorMessageforPeriod').'	</div>';} ?>
