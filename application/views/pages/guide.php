@@ -20,47 +20,47 @@
                 <div class="mx-5 mb-4">
                     <ul>
                         <li><span class="toc-item-body">
-                        <a href="#kasutajad" class="toc-link text-primary h6">Kasutajad</a></span>
+                        <a href="#kasutajad" class="toc-link text-primary" style="font-size:16px">Kasutajad</a></span>
                         </li>
                         <li><span class="toc-item-body">
-                        <a href="#broneeringud" class="toc-link text-primary h6">Broneeringud</a>
+                        <a href="#broneeringud" class="toc-link text-primary" style="font-size:16px">Broneeringud</a>
                         </li>
                         <li><span class="toc-item-body">
-                        <a href="#satted" class="toc-link text-primary">Sätted</a>
+                        <a href="#satted" class="toc-link text-primary" style="font-size:16px">Sätted</a>
                         </li>
                         <div class="ml-5">
                             <li><span class="toc-item-body">
-                            <a href="#asutusesatted" class="toc-link text-primary">Asutuse sätted</a>
+                            <a href="#asutusesatted" class="toc-link text-primary" style="font-size:16px">Asutuse sätted</a>
                             </li>
                             <li><span class="toc-item-body">
-                            <a href="#broneerimisvorm" class="toc-link text-primary">Broneerimisvormi sätted</a>
+                            <a href="#broneerimisvorm" class="toc-link text-primary" style="font-size:16px">Broneerimisvormi sätted</a>
                             </li>
                         </div>
                         <li><span class="toc-item-body">
-                        <a href="#kalender" class="toc-link text-primary">Kalender</a>
+                        <a href="#kalender" class="toc-link text-primary" style="font-size:16px">Kalender</a>
                         </li>
                         <div class="ml-5">
                             <li><span class="toc-item-body">
-                            <a href="#uldinfo" class="toc-link text-primary">Üldinfo</a>
+                            <a href="#uldinfo" class="toc-link text-primary" style="font-size:16px">Üldinfo</a>
                             </li>
                             <li><span class="toc-item-body">
-                            <a href="#broneeringutegemine" class="toc-link text-primary">Broneeringu tegemine</a>
+                            <a href="#broneeringutegemine" class="toc-link text-primary" style="font-size:16px">Broneeringu tegemine</a>
                             </li>
                             <li><span class="toc-item-body">
-                            <a href="#bronnimuutmine" class="toc-link text-primary">Olemasoleva broneeringu muutmine</a>
+                            <a href="#bronnimuutmine" class="toc-link text-primary" style="font-size:16px">Olemasoleva broneeringu muutmine</a>
                             </li>
                             <li><span class="toc-item-body">
-                            <a href="#bronniliigutamine" class="toc-link text-primary">Kalendrivaates broneeringute liigutamine</a>
+                            <a href="#bronniliigutamine" class="toc-link text-primary" style="font-size:16px">Kalendrivaates broneeringute liigutamine</a>
                             </li>
                             <li><span class="toc-item-body">
-                            <a href="#bronnikustutamine" class="toc-link text-primary">Broneeringu kustutamine</a>
+                            <a href="#bronnikustutamine" class="toc-link text-primary" style="font-size:16px">Broneeringu kustutamine</a>
                             </li>
                         </div>
                     </ul>
                 </div>
-                    <h5 class="mx-5 mb-4 mt-5 font-weight-bold" id="kasutajad">Kasutajad</h5>
+                    <h4 class="mx-5 mb-4 mt-5 font-weight-bold" id="kasutajad">Kasutajad</h4>
                     <div class="mx-5 mt-2">
-                    <u><p class="mx-4">
+                    <u><p class="mx-4" style="font-size:17px">
                     Kalendris on nelja tüüpi kasutajaid:
                     </p></u>
                     <div class="mt-4 mx-5">
@@ -87,7 +87,7 @@
                     </div>
                 <div>
                 </div>
-                    <h5 class="mx-5 mb-5 mt-5 font-weight-bold" id="broneeringud">Broneeringud</h5>
+                    <h4 class="mx-5 mb-5 mt-5 font-weight-bold" id="broneeringud">Broneeringud</h4>
                     <div class="mx-5 mt-5">
                         <p style="font-size:16px">Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
                         broneeringud tabeli kujul. Tabelist saab broneeringuid otsida märksõnaga. Samuti saab
@@ -96,7 +96,7 @@
                     </div>
                 <div>
                 </div>
-                    <h5 class="mx-5 mb-5 mt-5 font-weight-bold" id="satted">Sätted</h5>
+                    <h4 class="mx-5 mb-5 mt-5 font-weight-bold" id="satted">Sätted</h4>
                     <div class="mx-5 mt-2">
                         <p style="font-size:16px"><u id="asutusesatted" style="font-size:16px">Asutuse sätete</u> all näeb oma asutusega seotud infot. 
                         Peaadministraator saab ruume muuta või lisada, kui vajutada lehe alumises osas nuppu 
@@ -116,8 +116,8 @@
 
                     </div>
                 <div>
-                    <h5 class="mx-5 mb-5 font-weight-bold mt-5" id="kalender">Kalender</h5>
-                    <u><h5 class="mx-5 mt-2" id="uldinfo"> Üldinfo: </h5></u>
+                    <h4 class="mx-5 mb-5 font-weight-bold mt-5" id="kalender">Kalender</h4>
+                    <u><h4 class="mx-5 mt-2" id="uldinfo"> Üldinfo: </h4></u>
                     <div>
                         <p class="mx-5 col-10 mt-3" style="font-size:16px">
                         Ruumi vahetamiseks valige sobiv ruum rippmenüüst:
@@ -143,7 +143,7 @@
                         </p><img class="mx-2 mt-5 mb-4 col-sm-12" src="<?php echo base_url(); ?>assets/img/modalwindowPacking.gif">
                     </div>
 
-                    <u><h5 class="mx-5 mt-5" id="broneeringutegemine"> Broneeringu tegemine: </h5></u>
+                    <u><h4 class="mx-5 mt-5" id="broneeringutegemine"> Broneeringu tegemine: </h4></u>
                     <div> 
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu tegemiseks valige hiirega otse kalendris sobiv kuupäev ja ajavahemik: </p>
@@ -163,7 +163,7 @@
                         <p class="mx-5 col-10 mt-3" style="font-size:16px"> Sellist broneeringut saab salvestada või muuta. Kui veateateid ei ole viiakse kasutaja otse 
                         kalendrivaatesse tagasi. </p>
                     </div>
-                    <u><h5 class="mx-5 mt-5" id="bronnimuutmine"> Olemasoleva broneeringu muutmine: </h5></u>
+                    <u><h4 class="mx-5 mt-5" id="bronnimuutmine"> Olemasoleva broneeringu muutmine: </h4></u>
                     <div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
@@ -186,7 +186,7 @@
                         modaalaknas: 
                         </p><img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
                     </div>
-                    <u><h5 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h5></u>
+                    <u><h4 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
                     <div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Seotud broneeringu lisamiseks tuleb all hoida klahvi
