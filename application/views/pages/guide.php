@@ -19,41 +19,41 @@
                 </div>
                 <div class="mx-5 mb-4">
                     <ul>
-                        <li><span class="toc-item-body">
-                        <a href="#kasutajad" class="toc-link text-primary" style="font-size:16px">Kasutajad</a></span>
+                        <li class="h5"><span class="toc-item-body">
+                        <a href="#kasutajad" class="toc-link h5 text-primary">Kasutajad</a></span>
                         </li>
-                        <li><span class="toc-item-body">
-                        <a href="#broneeringud" class="toc-link text-primary" style="font-size:16px">Broneeringud</a>
+                        <li class="h5"><span class="toc-item-body">
+                        <a href="#broneeringud" class="toc-link h5 text-primary">Broneeringud</a>
                         </li>
-                        <li><span class="toc-item-body">
-                        <a href="#satted" class="toc-link text-primary" style="font-size:16px">Sätted</a>
+                        <li class="h5"><span class="toc-item-body">
+                        <a href="#satted" class="toc-link h5 text-primary">Sätted</a>
                         </li>
                         <div class="ml-5">
-                            <li><span class="toc-item-body">
-                            <a href="#asutusesatted" class="toc-link text-primary" style="font-size:16px">Asutuse sätted</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#asutusesatted" class="toc-link h5 text-primary">Asutuse sätted</a>
                             </li>
-                            <li><span class="toc-item-body">
-                            <a href="#broneerimisvorm" class="toc-link text-primary" style="font-size:16px">Broneerimisvormi sätted</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#broneerimisvorm" class="toc-link h5 text-primary">Broneerimisvormi sätted</a>
                             </li>
                         </div>
-                        <li><span class="toc-item-body">
-                        <a href="#kalender" class="toc-link text-primary" style="font-size:16px">Kalender</a>
+                        <li class="h5"><span class="toc-item-body">
+                        <a href="#kalender" class="toc-link h5 text-primary">Kalender</a>
                         </li>
                         <div class="ml-5">
-                            <li><span class="toc-item-body">
-                            <a href="#uldinfo" class="toc-link text-primary" style="font-size:16px">Üldinfo</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#uldinfo" class="toc-link h5 text-primary">Üldinfo</a>
                             </li>
-                            <li><span class="toc-item-body">
-                            <a href="#broneeringutegemine" class="toc-link text-primary" style="font-size:16px">Broneeringu tegemine</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#broneeringutegemine" class="toc-link h5 text-primary">Broneeringu tegemine</a>
                             </li>
-                            <li><span class="toc-item-body">
-                            <a href="#bronnimuutmine" class="toc-link text-primary" style="font-size:16px">Olemasoleva broneeringu muutmine</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#bronnimuutmine" class="toc-link h5 text-primary">Olemasoleva broneeringu muutmine</a>
                             </li>
-                            <li><span class="toc-item-body">
-                            <a href="#bronniliigutamine" class="toc-link text-primary" style="font-size:16px">Kalendrivaates broneeringute liigutamine</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#bronniliigutamine" class="toc-link h5 text-primary">Kalendrivaates broneeringute liigutamine</a>
                             </li>
-                            <li><span class="toc-item-body">
-                            <a href="#bronnikustutamine" class="toc-link text-primary" style="font-size:16px">Broneeringu kustutamine</a>
+                            <li class="h5"><span class="toc-item-body">
+                            <a href="#bronnikustutamine" class="toc-link h5 text-primary">Broneeringu kustutamine</a>
                             </li>
                         </div>
                     </ul>
@@ -205,7 +205,16 @@
                         seotud broneerinud (selleks tee linnuke "VALI KÕIK" ette), ainult selle ühe valitud broneeringu
                         (mille peal kalendrivaates klõpsasid) või mitu broneeringut (selleks klõpsa linnuke nende kuupäevade
                         ja broneeringute ette, mida soovid kustutada):
-                        </p> <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
+                        </p> <img id="myImg" class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
+                        <div id="myModal" class="modal">
+
+                            <!-- The Close Button -->
+                            <span class="close" style="position:absolute; font-weight: bold">&times;</span>
+
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content" style="width:80%; max-width:1500px; margin:auto; display:block" id="img01">
+
+                        </div>
                     </div>
                 
                 </div>
@@ -224,6 +233,27 @@
     // $(document).ready(function(){
     //     $(this).scrollTop(0);
     // });
+
+    var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
 </script>
 
 
