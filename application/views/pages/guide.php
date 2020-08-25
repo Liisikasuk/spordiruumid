@@ -98,7 +98,7 @@
                 </div>
                     <h5 class="mx-5 mb-5 mt-5 font-weight-bold" id="satted">Sätted</h5>
                     <div class="mx-5 mt-2">
-                        <p style="font-size:16px"><u id="asutusesatted">Asutuse sätete</u> all näeb oma asutusega seotud infot. 
+                        <p style="font-size:16px"><u id="asutusesatted" style="font-size:16px">Asutuse sätete</u> all näeb oma asutusega seotud infot. 
                         Peaadministraator saab ruume muuta või lisada, kui vajutada lehe alumises osas nuppu 
                         <img class="mr-2 mb-1 col-4" src="<?php echo base_url(); ?>assets/img/settingsEditRoom.jpg">. Broneeringute
                         tegemiseks tuleb ruumid lisada. Võimalik, et asutuses on ruume, mida renditakse välja, kuid selle ruumi kalendrit
@@ -106,7 +106,7 @@
                         teiste kasutajate eest ära peita, kuid asutuse administraatorid saavad ruumide kalendreid endiselt hallata</p>
                     </div>
                     <div class="mx-5 mt-5">
-                        <p style="font-size:16px"><u id="broneerimisvorm">Broneerimisvormi sätted</u> - kõige pealt saab asutus
+                        <p style="font-size:16px"><u id="broneerimisvorm" style="font-size:16px">Broneerimisvormi sätted</u> - kõige pealt saab asutus
                         seadistada kohustuslikud väljad administraatorile. Seejärel, kui asutuse poolt on tavakasutajate
                         broneerimine lubatud, siis avanevad tavakasutaja vormi sätted. Iga asutus saab valida, mis väljad
                         iga erineva päringu jaoks on nähtavad (kuvatakse kliendile päringu vormil) ning millised
