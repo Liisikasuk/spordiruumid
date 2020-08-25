@@ -1,4 +1,5 @@
 <?php // echo validation_errors(); ?>
+<html style="scroll-behavior:smooth">
 <div class="container">
 	<div class="container-md">
     
@@ -87,11 +88,11 @@
                 <div>
                 </div>
                     <h4 class="mx-5 mb-5 mt-5 font-weight-bold" id="broneeringud">Broneeringud</h4>
-                    <div class="mx-5 mt-4">
+                    <div class="mx-5 mt-5">
                         <p class="h5">Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
                         broneeringud tabeli kujul. Tabelist saab broneeringuid otsida märksõnaga. Samuti saab
                         broneeringuid kuupäeva järgi filtreerida.</p>
-                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingColumns.gif">
+                        <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingColumns.gif">
                     </div>
                 <div>
                 </div>
@@ -111,7 +112,7 @@
                         iga erineva päringu jaoks on nähtavad (kuvatakse kliendile päringu vormil) ning millised
                         väljad on kohustuslikud (mis tuleb kliendil kindlasti täita). Iga erineva broneeringutüübi (sündmus,
                         ühekordne treening, hooajaline treening) jaoks on oma sätted. </p>
-                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/reservationformSettings.gif">
+                        <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/reservationformSettings.gif">
 
                     </div>
                 <div>
@@ -146,7 +147,7 @@
                     <div> 
                         <p class="mx-5 col-10 mt-5 h5">
                         Broneeringu tegemiseks valige hiirega otse kalendris sobiv kuupäev ja ajavahemik: </p>
-                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
+                        <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
                         <p class="mx-5 col-10 mt-5 h5">
                         või vajutage üleval paremal olevat nuppu "Uus broneering". Peale seda viiakse Teid broneeringu
                         tegemise lehele, kus saate valida millist broneeringut Te teha soovite, kas ühekordne,
@@ -167,13 +168,13 @@
                         <p class="mx-5 col-10 mt-5 h5">
                         Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
                         muuta. Seejärel vajutage nuppu "muuda valitud" </p>
-                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
+                        <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
                         <p class="mx-5 col-10 mt-5 h5">
                         Tervet hooajalist broneeringut saab muuta korraga, kui vajutada nuppu "Muuda hooajaliselt".
                         Valige üks päev, millisest alates Te soovite hooajalist broneeringut muuta. Süsteem tuvastab kõik
                         tulevased valitud nädalapäeva ja kellaaegadega broneeringud ning seejärel viiakse kasutaja
                         broneeringu muutmise vaatesse.
-                        </p> <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
+                        </p> <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
                         
                         <p class="mx-5 col-10 mt-5 h5">
                         Broneeringu muutmisvaates kuvatakse kattuvaid aegu ainult tuleviku kohta. Broneeringu muudatuse salvestamisel
@@ -183,7 +184,7 @@
                         <p class="mx-5 col-10 mt-5 h5">
                         Iga muudatuse tagajärjel küsitakse muutmise põhjust ning sellest tekib logi. Logi näeb
                         modaalaknas: 
-                        </p><img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
+                        </p><img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
                     <div>
@@ -219,10 +220,10 @@
 	</div>
 </div>
 
-<!-- <script>
-
-
-
-</script> -->
+<script>
+    // $(document).ready(function(){
+    //     $(this).scrollTop(0);
+    // });
+</script>
 
 
