@@ -206,13 +206,13 @@
                         (mille peal kalendrivaates klõpsasid) või mitu broneeringut (selleks klõpsa linnuke nende kuupäevade
                         ja broneeringute ette, mida soovid kustutada):
                         </p> <img id="myImg" class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
-                        <div id="myModal" class="modal">
+                        <div id="myModal" class="modal" style="background-color:rgb(0,0,0); position:fixed">
 
                             <!-- The Close Button -->
-                            <span class="close" style="position:absolute; font-weight: bold">&times;</span>
+                            <span class="close" style="position:absolute; font-weight:bold; top:10px; right: 25px; color:#f1f1f1; font-size:50px">&times;</span>
 
                             <!-- Modal Content (The Image) -->
-                            <img class="modal-content" style="width:80%; max-width:1500px; margin:auto; display:block" id="img01">
+                            <img class="modal-content" style="width:90%; max-width:1500px; margin:auto; display:block" id="img01">
 
                         </div>
                     </div>
@@ -239,7 +239,6 @@
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
