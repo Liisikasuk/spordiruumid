@@ -20,10 +20,10 @@
                 <div class="mx-5 mb-4">
                     <ul>
                         <li><span class="toc-item-body">
-                        <a href="#kasutajad" class="toc-link text-primary">Kasutajad</a></span>
+                        <a href="#kasutajad" class="toc-link text-primary h6">Kasutajad</a></span>
                         </li>
                         <li><span class="toc-item-body">
-                        <a href="#broneeringud" class="toc-link text-primary">Broneeringud</a>
+                        <a href="#broneeringud" class="toc-link text-primary h6">Broneeringud</a>
                         </li>
                         <li><span class="toc-item-body">
                         <a href="#satted" class="toc-link text-primary">Sätted</a>
@@ -65,31 +65,31 @@
                     </p></u>
                     <div class="mt-4 mx-5">
                         <ul>
-                            <li><p>KOV administraator - Pärnu Linnavalitsuse ametnik, kes jagab
+                            <li><p style="font-size:16px">KOV administraator - Pärnu Linnavalitsuse ametnik, kes jagab
                             asutuste esindajatele õiguseid. Näeb kõiki süsteemi kasutajaid, asutusi
                             ja kalendrite vaateid</p></li>
                         </ul>
                         <ul>
-                            <li><p>Asutuse peaadministraator - oma asutuse piires saab muuta ja lisada ruume
+                            <li><p style="font-size:16px">Asutuse peaadministraator - oma asutuse piires saab muuta ja lisada ruume
                             ning hallata administraatoreid. Lisaks on tal samad õigused, mis administraatoril</p></li>
                         </ul>
                         <ul>
-                            <li><p>Asutuse administraator - saab teha kõiki toiminguid seoses broneeringutega.
+                            <li><p style="font-size:16px">Asutuse administraator - saab teha kõiki toiminguid seoses broneeringutega.
                             Näeb teisi asutuse kasutajaid ning asutuse sätteid (muuta ei saa)</p></li>
                         </ul>
                         <ul>
-                            <li><p>Tavakasutaja - sisse logimata saab näha ruumide saadavust. Sisse loginuna
+                            <li><p style="font-size:16px">Tavakasutaja - sisse logimata saab näha ruumide saadavust. Sisse loginuna
                             saab ruumi broneerimiseks saata asutusele päringu. Saab oma broneeringuid hallata</p></li>
                         </ul>
                     </div>
-                        <p class="mt-4">Kasutajate lehel näeb oma asutuse administraatoreid ning
+                        <p class="mt-4" style="font-size:16px">Kasutajate lehel näeb oma asutuse administraatoreid ning
                         broneeringute klientide kontakte. Viimased tekivad automaatselt, kui tehakse broneering</p>
                     </div>
                 <div>
                 </div>
                     <h5 class="mx-5 mb-5 mt-5 font-weight-bold" id="broneeringud">Broneeringud</h5>
                     <div class="mx-5 mt-5">
-                        <p>Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
+                        <p style="font-size:16px">Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
                         broneeringud tabeli kujul. Tabelist saab broneeringuid otsida märksõnaga. Samuti saab
                         broneeringuid kuupäeva järgi filtreerida.</p>
                         <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingColumns.gif">
@@ -98,7 +98,7 @@
                 </div>
                     <h5 class="mx-5 mb-5 mt-5 font-weight-bold" id="satted">Sätted</h5>
                     <div class="mx-5 mt-2">
-                        <p><u id="asutusesatted">Asutuse sätete</u> all näeb oma asutusega seotud infot. 
+                        <p style="font-size:16px"><u id="asutusesatted">Asutuse sätete</u> all näeb oma asutusega seotud infot. 
                         Peaadministraator saab ruume muuta või lisada, kui vajutada lehe alumises osas nuppu 
                         <img class="mr-2 mb-1 col-4" src="<?php echo base_url(); ?>assets/img/settingsEditRoom.jpg">. Broneeringute
                         tegemiseks tuleb ruumid lisada. Võimalik, et asutuses on ruume, mida renditakse välja, kuid selle ruumi kalendrit
@@ -106,7 +106,7 @@
                         teiste kasutajate eest ära peita, kuid asutuse administraatorid saavad ruumide kalendreid endiselt hallata</p>
                     </div>
                     <div class="mx-5 mt-5">
-                        <p><u id="broneerimisvorm">Broneerimisvormi sätted</u> - kõige pealt saab asutus
+                        <p style="font-size:16px"><u id="broneerimisvorm">Broneerimisvormi sätted</u> - kõige pealt saab asutus
                         seadistada kohustuslikud väljad administraatorile. Seejärel, kui asutuse poolt on tavakasutajate
                         broneerimine lubatud, siis avanevad tavakasutaja vormi sätted. Iga asutus saab valida, mis väljad
                         iga erineva päringu jaoks on nähtavad (kuvatakse kliendile päringu vormil) ning millised
@@ -119,24 +119,24 @@
                     <h5 class="mx-5 mb-5 font-weight-bold mt-5" id="kalender">Kalender</h5>
                     <u><h5 class="mx-5 mt-2" id="uldinfo"> Üldinfo: </h5></u>
                     <div>
-                        <p class="mx-5 col-10 mt-3">
+                        <p class="mx-5 col-10 mt-3" style="font-size:16px">
                         Ruumi vahetamiseks valige sobiv ruum rippmenüüst:
                         <img class="mr-5 mt-5 col-9" src="<?php echo base_url(); ?>assets/img/chooseroom.jpg"></p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Kõiki ruume saab korraga vaadata, kui vajutada lingile "Kõik ruumid":
                         <img class="mr-5 mt-5 col-7" src="<?php echo base_url(); ?>assets/img/allrooms.png">
                         </p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Tagasi kalendrisse saamiseks vajuta "Tagasi töökalendrisse":
                         <img class="mr-5 mt-5 col-5" src="<?php echo base_url(); ?>assets/img/backToCalendar.png">
                         </p>
-                        <p class="mx-5 col-10 mt-4">
+                        <p class="mx-5 col-10 mt-4" style="font-size:16px">
                         Tavakasutajad näevad avalikus kalendris ainult klubi nime ning ruumi kasutamise
                         eesmärki (vasakpoolne pilt). Asutuse kasutajad näevad lisaks päringu aega, 
                         broneeringu värvi ning broneeringu muutmise märki (parempoolne pilt):
                         <img class="mr-5 mt-4 col-12" src="<?php echo base_url(); ?>assets/img/calendarView.png">
                         </p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringul klikkides avaneb vasakul modaalaken, kus  näeb broneeringuga seotud infot.
                         Modaalaknas saab sakke kokku pakkida, kui nendel vajutada:
                         
@@ -145,62 +145,62 @@
 
                     <u><h5 class="mx-5 mt-5" id="broneeringutegemine"> Broneeringu tegemine: </h5></u>
                     <div> 
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu tegemiseks valige hiirega otse kalendris sobiv kuupäev ja ajavahemik: </p>
                         <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         või vajutage üleval paremal olevat nuppu "Uus broneering". Peale seda viiakse Teid broneeringu
                         tegemise lehele, kus saate valida millist broneeringut Te teha soovite, kas ühekordne,
                         hooajaline või suletud:
                         </p> <img class="mx-2 mt-5 mb-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/chooseReservation.gif">
                         
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Täitke väljad ja vajutage "Broneeri". Kattuvate aegade puhul antakse Teile 
                         sellest teada:
                         
                         </p>
                         <img class="mx-5 mt-3 col-6" src="<?php echo base_url(); ?>assets/img/overlapReservations.png">
-                        <p class="mx-5 col-10 mt-3"> Sellist broneeringut saab salvestada või muuta. Kui veateateid ei ole viiakse kasutaja otse 
+                        <p class="mx-5 col-10 mt-3" style="font-size:16px"> Sellist broneeringut saab salvestada või muuta. Kui veateateid ei ole viiakse kasutaja otse 
                         kalendrivaatesse tagasi. </p>
                     </div>
                     <u><h5 class="mx-5 mt-5" id="bronnimuutmine"> Olemasoleva broneeringu muutmine: </h5></u>
                     <div>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
                         muuta. Seejärel vajutage nuppu "muuda valitud" </p>
                         <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Tervet hooajalist broneeringut saab muuta korraga, kui vajutada nuppu "Muuda hooajaliselt".
                         Valige üks päev, millisest alates Te soovite hooajalist broneeringut muuta. Süsteem tuvastab kõik
                         tulevased valitud nädalapäeva ja kellaaegadega broneeringud ning seejärel viiakse kasutaja
                         broneeringu muutmise vaatesse.
                         </p> <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
                         
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu muutmisvaates kuvatakse kattuvaid aegu ainult tuleviku kohta. Broneeringu muudatuse salvestamisel
                         ei hoiatata uutest kattuvatest aegadest. Seda näeb kalendrist, kui klikkida broneeringul. Kattuvad ajad on modaalaknas punased:
                         
                         </p><img class="mx-5 mt-3 mb-5 col-7" src="<?php echo base_url(); ?>assets/img/redOverlapTimes.png">
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Iga muudatuse tagajärjel küsitakse muutmise põhjust ning sellest tekib logi. Logi näeb
                         modaalaknas: 
                         </p><img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
                     </div>
                     <u><h5 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h5></u>
                     <div>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Seotud broneeringu lisamiseks tuleb all hoida klahvi
                         <img class="col-sm-2" src="<?php echo base_url(); ?>assets/img/shift.jpg"> 
                         ja samal ajal lohistada broneeringut: </p>
                         <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingWithShift.gif"></p>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Kalendris saab broneeringuid muule ajale ja kuupäevale lohistada või broneeringu alt otsast
                         kinni võttes broneeringu aega pikemaks/lühemaks teha:
                         </p> <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingReservation.gif">
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronnikustutamine"> Broneeringu kustutamine: </h4></u>
                     <div>
-                        <p class="mx-5 col-10 mt-5">
+                        <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu kustutamiseks klõpsa broneeringu peal. Avanenud modaalaknas vali, kas tahad kustutada kõik
                         seotud broneerinud (selleks tee linnuke "VALI KÕIK" ette), ainult selle ühe valitud broneeringu
                         (mille peal kalendrivaates klõpsasid) või mitu broneeringut (selleks klõpsa linnuke nende kuupäevade
