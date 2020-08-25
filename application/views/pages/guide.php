@@ -90,7 +90,8 @@
                     <div class="mx-5 mt-4">
                         <p class="h5">Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
                         broneeringud tabeli kujul. Tabelist saab broneeringuid otsida märksõnaga. Samuti saab
-                        broneeringuid kuupäeva järgi filtreerida. SIIA KA TEHA GIF SELLEST ET SAAB TULPASID LIIGUTADA</p>
+                        broneeringuid kuupäeva järgi filtreerida.</p>
+                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingColumns.gif">
                     </div>
                 <div>
                 </div>
@@ -109,7 +110,9 @@
                         broneerimine lubatud, siis avanevad tavakasutaja vormi sätted. Iga asutus saab valida, mis väljad
                         iga erineva päringu jaoks on nähtavad (kuvatakse kliendile päringu vormil) ning millised
                         väljad on kohustuslikud (mis tuleb kliendil kindlasti täita). Iga erineva broneeringutüübi (sündmus,
-                        ühekordne treening, hooajaline treening) jaoks on oma sätted. SIIA KA GIF TEHA</p>
+                        ühekordne treening, hooajaline treening) jaoks on oma sätted. </p>
+                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/reservationformSettings.gif">
+
                     </div>
                 <div>
                     <h4 class="mx-5 mb-5 font-weight-bold mt-5" id="kalender">Kalender</h4>
@@ -196,7 +199,12 @@
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronnikustutamine"> Broneeringu kustutamine: </h4></u>
                     <div>
-
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Broneeringu kustutamiseks klõpsa broneeringu peal. Avanenud modaalaknas vali, kas tahad kustutada kõik
+                        seotud broneerinud (selleks tee linnuke "VALI KÕIK" ette), ainult selle ühe valitud broneeringu
+                        (mille peal kalendrivaates klõpsasid) või mitu broneeringut (selleks klõpsa linnuke nende kuupäevade
+                        ja broneeringute ette, mida soovid kustutada):
+                        </p> <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
                     </div>
                 
                 </div>
