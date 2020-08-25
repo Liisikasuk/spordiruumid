@@ -51,40 +51,40 @@
                 <div class="mx-5 mb-4">
                     <ul>
                         <li class="h5"><span class="toc-item-body">
-                        <a href="#kasutajad" class="toc-link h5">Kasutajad</a></span>
+                        <a href="#kasutajad" class="toc-link h5 text-primary">Kasutajad</a></span>
                         </li>
                         <li class="h5"><span class="toc-item-body">
-                        <a href="#broneeringud" class="toc-link h5">Broneeringud</a>
+                        <a href="#broneeringud" class="toc-link h5 text-primary">Broneeringud</a>
                         </li>
                         <li class="h5"><span class="toc-item-body">
-                        <a href="#satted" class="toc-link h5">Sätted</a>
+                        <a href="#satted" class="toc-link h5 text-primary">Sätted</a>
                         </li>
                         <div class="ml-5">
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#asutusesatted" class="toc-link h5">Asutuse sätted</a>
+                            <a href="#asutusesatted" class="toc-link h5 text-primary">Asutuse sätted</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#broneerimisvorm" class="toc-link h5">Broneerimisvormi sätted</a>
+                            <a href="#broneerimisvorm" class="toc-link h5 text-primary">Broneerimisvormi sätted</a>
                             </li>
                         </div>
                         <li class="h5"><span class="toc-item-body">
-                        <a href="#kalender" class="toc-link h5">Kalender</a>
+                        <a href="#kalender" class="toc-link h5 text-primary">Kalender</a>
                         </li>
                         <div class="ml-5">
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#uldinfo" class="toc-link h5">Üldinfo</a>
+                            <a href="#uldinfo" class="toc-link h5 text-primary">Üldinfo</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#broneeringutegemine" class="toc-link h5">Broneeringu tegemine</a>
+                            <a href="#broneeringutegemine" class="toc-link h5 text-primary">Broneeringu tegemine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronnimuutmine" class="toc-link h5">Olemasoleva broneeringu muutmine</a>
+                            <a href="#bronnimuutmine" class="toc-link h5 text-primary">Olemasoleva broneeringu muutmine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronniliigutamine" class="toc-link h5">Kalendrivaates broneeringute liigutamine</a>
+                            <a href="#bronniliigutamine" class="toc-link h5 text-primary">Kalendrivaates broneeringute liigutamine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronnikustutamine" class="toc-link h5">Broneeringu kustutamine</a>
+                            <a href="#bronnikustutamine" class="toc-link h5 text-primary">Broneeringu kustutamine</a>
                             </li>
                         </div>
                     </ul>
@@ -165,11 +165,28 @@
                         sellest teada:
                         
                         </p>
-                        <img class="mx-5 mt-3" src="<?php echo base_url(); ?>assets/img/overlapReservations.png">
+                        <img class="mx-5 mt-3 col-6" src="<?php echo base_url(); ?>assets/img/overlapReservations.png">
+                        <p class="mx-5 col-10 mt-3 h5"> Sellist broneeringut saab salvestada või muuta. Kui veateateid ei ole viiakse kasutaja otse 
+                        kalendrivaatesse tagasi. </p>
                     </div>
-                    <u><h4 class="mx-5 mt-5" id="muutmine"> Olemasoleva broneeringu muutmine: </h4></u>
+                    <u><h4 class="mx-5 mt-5" id="bronnimuutmine"> Olemasoleva broneeringu muutmine: </h4></u>
                     <div>
-
+                        <p class="mx-5 col-10 mt-3 h5">
+                        Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
+                        muuta. Seejärel vajutage nuppu "muuda valitud" </p>
+                        <img class="mx-2 mt-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Tervet hooajalist broneeringut saab muuta korraga, kui vajutada nuppu "Muuda hooajaliselt".
+                        Valige üks päev, millisest alates Te soovite hooajalist broneeringut muuta. Süsteem tuvastab kõik
+                        tulevased valitud nädalapäeva ja kellaaegadega broneeringud ning seejärel viiakse kasutaja
+                        broneeringu muutmise vaatesse.
+                        </p> <img class="mx-2 mt-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
+                        
+                        <p class="mx-5 col-10 mt-5 h5">
+                        Broneeringu muutmisvaates kuvatakse kattuvaid aegu ainult tuleviku kohta. Broneeringu muudatuse salvestamisel
+                        ei hoiatata uutest kattuvatest aegadest. Seda näeb kalendrist, kui klikkida broneeringul. Kattuvad ajad on modaalaknas punased:
+                        
+                        </p><img class="mx-5 mt-3 col-7" src="<?php echo base_url(); ?>assets/img/redOverlapTimes.png">
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
                     <div>
