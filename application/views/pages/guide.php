@@ -127,20 +127,20 @@
                     <div>
                         <p class="mx-5 col-10 mt-3 h5">
                         Ruumi vahetamiseks valige sobiv ruum rippmenüüst:
-                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/chooseroom.jpg"></p>
+                        <img class="mr-5 mt-3 col-9" src="<?php echo base_url(); ?>assets/img/chooseroom.jpg"></p>
                         <p class="mx-5 col-10 mt-5 h5">
                         Kõiki ruume saab korraga vaadata, kui vajutada lingile "Kõik ruumid":
-                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/allrooms.png">
+                        <img class="mr-5 mt-3 col-7" src="<?php echo base_url(); ?>assets/img/allrooms.png">
                         </p>
                         <p class="mx-5 col-10 mt-5 h5">
                         Tagasi kalendrisse saamiseks vajuta "Tagasi töökalendrisse":
-                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/backToCalendar.png">
+                        <img class="mr-5 mt-3 col-5" src="<?php echo base_url(); ?>assets/img/backToCalendar.png">
                         </p>
                         <p class="mx-5 col-10 mt-4 h5">
                         Tavakasutajad näevad avalikus kalendris ainult klubi nime ning ruumi kasutamise
                         eesmärki (vasakpoolne pilt). Asutuse kasutajad näevad lisaks päringu aega, 
                         broneeringu värvi ning broneeringu muutmise märki (parempoolne pilt):
-                        <img class="mr-5 mt-3" src="<?php echo base_url(); ?>assets/img/calendarView.png">
+                        <img class="mr-5 mt-3 col-12" src="<?php echo base_url(); ?>assets/img/calendarView.png">
                         </p>
                         <p class="mx-5 col-10 mt-5 h5">
                         Broneeringul klikkides avaneb vasakul modaalaken, kus  näeb broneeringuga seotud infot.
