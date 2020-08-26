@@ -110,12 +110,12 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 									<tr>
 									<label>Treening on: </label>
 										<!-- <td>Treening on: </td> -->
-										<td><label class="mx-0 p-0"><input type="checkbox" id="public" class="form-check-input" ><span></span></label></td>
+										<td><label class="mx-0 p-0"><input type="checkbox" id="public" name="check" onclick="onlyOne(this)" class="form-check-input" ><span></span></label></td>
 										<td>avalik</td>
 										
 									</tr>
 									<tr>
-										<td><label class="mx-0 col-1 p-0"><input type="checkbox" id="private" class="form-check-input" ><span></span></label></td>
+										<td><label class="mx-0 col-1 p-0"><input type="checkbox" id="private" name="check" onclick="onlyOne(this)" class="form-check-input" ><span></span></label></td>
 										<td>privaatne</td>
 									</tr>
 								</table>
@@ -210,16 +210,16 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 							<table>
 								<tr>
 									<td>Treeningu ettevalmistamiseks kuluv aeg <b data-tooltip="Treeninguks ruumi ette valmistamine (varustuse ülespanek jne)"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="6%"></b></td>
-									<td class="col-4 col-sm-2"><input type="input" class="form-control" style="text-align:right"></td>
+									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
 									<td>tund(i)</td>
-									<td class="col-4 col-sm-2" ><input type="input" class="form-control" placeholder=30 style="text-align:right"></td>
+									<td class="col-4 col-sm-2" ><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
 									<td>min</td>
 								</tr>
 								<tr>
 									<td>Treeningujärgsele koristamisele kuluv aeg</td>
-									<td class="col-4 col-sm-2"><input type="input" class="form-control" style="text-align:right"></td>
+									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
 									<td>tund(i)</td>
-									<td class="col-4 col-sm-2"><input type="input" class="form-control" placeholder=30 style="text-align:right"></td>
+									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
 									<td>min</td>
 								</tr>
 							</table>
@@ -241,7 +241,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                         <div class="row d-flex mt-2 px-md-5 mx-md-5">
                             <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
                                 <label>Telefon<?php if($bookingformdata['phone_admin']==1){echo "*";} ?> <?php if($this->session->flashdata('phoneIsNotCorrect')){  echo $this->session->flashdata('phoneIsNotCorrect');} ?><?php if($this->session->flashdata('validationErrorMessageForPhone')){  echo $this->session->flashdata('validationErrorMessageForPhone');} ?></label>
-                                <input class="form-control" id="phoneForSingle" name="phone" value="<?php if(isset($data['phone'])){ echo $data['phone'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('phone');}; ?>">
+                                <input class="form-control" id="phoneForSingle" onkeypress="return isNumber(event)" name="phone" value="<?php if(isset($data['phone'])){ echo $data['phone'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('phone');}; ?>">
                             </div>
 
                             <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
@@ -262,7 +262,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             </div>
 							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
                                 <label>Inimeste arv kuni</label>
-                                <input class="form-control col-6">
+                                <input class="form-control col-6" onkeypress="return isNumber(event)">
                             </div>
                                     
                         </div>
@@ -276,7 +276,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 							</div>
                             <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Registrkood/isikukood</label>
-								<input class="form-control" id="text3">
+								<input class="form-control" id="text3" onkeypress="return isNumber(event)">
                             </div>
                         </div>
 						<div class="row d-flex mt-2 px-md-5 mx-md-5">
@@ -292,7 +292,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 						<div class="row d-flex mt-2 px-md-5 mx-md-5">
 							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Telefon</label>
-								<input class="form-control" id="text9">
+								<input class="form-control" id="text9" onkeypress="return isNumber(event)">
 							</div>
 							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Email</label>
@@ -948,6 +948,15 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/datepicker.js"></script>
 <script>
 
+	function isNumber(evt) {
+		evt = (evt) ? evt : window.event;
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+			return false;
+		}
+		return true;
+	}
+
 	$(document).ready(function() {
 	$("#checkbox1").on("change",function(){
 
@@ -963,6 +972,13 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 	});
 
 	});
+
+	function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('check')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
 
 	$(document).ready(function(){
 		$('#payment').on('change', function() {
