@@ -272,52 +272,88 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 							
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Ettevõtte/eraisiku nimi</label>
-								<input class="form-control">
+								<input class="form-control" id="text1">
 							</div>
                             <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Registrkood/isikukood</label>
-								<input class="form-control">
+								<input class="form-control" id="text3">
                             </div>
                         </div>
 						<div class="row d-flex mt-2 px-md-5 mx-md-5">
 							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Aadress</label>
-								<input class="form-control">
+								<input class="form-control" id="text5">
 							</div>
 							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Kontaktisik</label>
-								<input class="form-control">
+								<input class="form-control" id="text7">
 							</div>     
                         </div>
 						<div class="row d-flex mt-2 px-md-5 mx-md-5">
 							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Telefon</label>
-								<input class="form-control">
+								<input class="form-control" id="text9">
 							</div>
 							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
 								<label class=" col-7 col-sm-7 col-md-12  p-0" >Email</label>
-								<input class="form-control">
+								<input class="form-control" id="text11">
 							</div>     
                         </div>
 						<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Maksmisviis</h4>
 						<div class="ml-3">
-                        <div class="row mt-3 pl-4 px-md-5 mx-md-5">
-							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+							<div class="row mt-3 pl-4 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+									<select id="payment" class="form-control arrow">
+									<option >Vali maksmisviis</option>
+									<option >sularaha kohapeal tasudes</option>
+									<option >pangakaart kohapeal tasudes</option>
+									<option value="1">arvega</option>
+									<option >ettemaks</option>
+									<option >muu</option>
+									</select>
+								</div>
 								
-                                <select  class="form-control arrow">
-								<option >Vali maksmisviis</option>
-								<option >sularaha kohapeal tasudes</option>
-								<option >pangakaart kohapeal tasudes</option>
-								<option >arvega</option>
-								<option >ettemaks</option>
-								<option >muu</option>
-								</select>
+							</div>
+                        </div>
+						<div style='display:none;' id='arvega'>
+							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Arve saaja andmed</h4>
+							<label class="p-md-0 mt-3 pl-md-5 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
+
+							<div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+								
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Ettevõtte/eraisiku nimi</label>
+									<input class="form-control" id="text2">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Registrkood/isikukood</label>
+									<input class="form-control" id="text4">
+								</div>
+							</div>
+							<div class="row d-flex mt-2 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Aadress</label>
+									<input class="form-control" id="text6">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Kontaktisik</label>
+									<input class="form-control" id="text8">
+								</div>     
+							</div>
+							<div class="row d-flex mt-2 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Telefon</label>
+									<input class="form-control" id="text10">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Email</label>
+									<input class="form-control" id="text12">
+								</div>     
 							</div>
 						</div>
-                        </div>
 
 						
-						<label class="px-2"><input type="checkbox" <?php if(isset($data['approveNow'])){ if($data['approveNow']==1) echo  'checked'; }  else if($bookingformdata['approved_admin']==1){echo 'checked';} ?> name="approveNow" id="approveNow" value="<?php if(isset($data['approveNow'])){ echo $data['approveNow']; } else if(isset($bookingformdata['approved_admin'])){echo $bookingformdata['approved_admin'];} else{echo 1;}?>"><span></span></label> Kinnita kohe
+						<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox" <?php if(isset($data['approveNow'])){ if($data['approveNow']==1) echo  'checked'; }  else if($bookingformdata['approved_admin']==1){echo 'checked';} ?> name="approveNow" id="approveNow" value="<?php if(isset($data['approveNow'])){ echo $data['approveNow']; } else if(isset($bookingformdata['approved_admin'])){echo $bookingformdata['approved_admin'];} else{echo 1;}?>"><span></span></label> Kinnita kohe
 
 											
                         
@@ -911,6 +947,35 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/datepicker.js"></script>
 <script>
+
+	$(document).ready(function() {
+	$("#checkbox1").on("change",function(){
+
+	if (this.checked ) {
+			$("#text2").val($("#text1").val());
+			$("#text4").val($("#text3").val());
+			$("#text6").val($("#text5").val());
+			$("#text8").val($("#text7").val());
+			$("#text10").val($("#text9").val());
+			$("#text12").val($("#text11").val());
+		}   
+
+	});
+
+	});
+
+	$(document).ready(function(){
+		$('#payment').on('change', function() {
+		if ( this.value == '1')
+		{
+			$("#arvega").show();
+		}
+		else
+		{
+			$("#arvega").hide();
+		}
+		});
+	});
 
 
     $(document).ready(function() {
