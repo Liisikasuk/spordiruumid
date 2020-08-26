@@ -110,12 +110,12 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 									<tr>
 									<label>Treening on: </label>
 										<!-- <td>Treening on: </td> -->
-										<td><label class="mx-0 p-0"><input type="checkbox" class="form-check-input" ><span></span></label></td>
+										<td><label class="mx-0 p-0"><input type="checkbox" id="public" class="form-check-input" ><span></span></label></td>
 										<td>avalik</td>
 										
 									</tr>
 									<tr>
-										<td><label class="mx-0 col-1 p-0"><input type="checkbox" class="form-check-input" ><span></span></label></td>
+										<td><label class="mx-0 col-1 p-0"><input type="checkbox" id="private" class="form-check-input" ><span></span></label></td>
 										<td>privaatne</td>
 									</tr>
 								</table>
@@ -209,7 +209,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 						<div class="pt-4 txt-xl mb-4 px-md-5 mx-md-5 ml-3 col-10">
 							<table>
 								<tr>
-									<td>Treeningu ettevalmistamiseks kuluv aeg</td>
+									<td>Treeningu ettevalmistamiseks kuluv aeg <b data-tooltip="Treeninguks ruumi ette valmistamine (varustuse ülespanek jne)"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="6%"></b></td>
 									<td class="col-4 col-sm-2"><input type="input" class="form-control" style="text-align:right"></td>
 									<td>tund(i)</td>
 									<td class="col-4 col-sm-2" ><input type="input" class="form-control" placeholder=30 style="text-align:right"></td>
@@ -228,7 +228,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                         <div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
                             <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 							
-								<label class=" col-7 col-sm-7 col-md-12  p-0" for="contact">Klubi nimi (avalik info)<?php if($bookingformdata['clubname_admin']==1){echo "*";} ?> <b data-tooltip="Klubi puudumisel kirjuta kontaktisiku nime initsiaalid"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></b> <?php if($this->session->flashdata('validationErrorMessageForClubname')){  echo $this->session->flashdata('validationErrorMessageForClubname');} ?></label>
+								<label class=" col-7 col-sm-7 col-md-12  p-0" for="contact">Klubi nimi/korraldaja (avalik info)<?php if($bookingformdata['clubname_admin']==1){echo "*";} ?> <b data-tooltip="Klubi puudumisel kirjuta kontaktisiku nime initsiaalid"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></b> <?php if($this->session->flashdata('validationErrorMessageForClubname')){  echo $this->session->flashdata('validationErrorMessageForClubname');} ?></label>
 								<input class="form-control <?php if($this->session->flashdata('validationErrorMessageForClubname')){ echo 'is-invalid';}?>" id="clubnameForSingle" type="text" name="clubname" required value="<?php if(isset($data['clubname'])): echo $data['clubname'];endif; ?>">
 							</div>
                             <input class="d-none" type="checkbox" id="typeOnce" name="type" value="1" checked>
@@ -353,7 +353,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 						</div>
 
 						
-						<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox" <?php if(isset($data['approveNow'])){ if($data['approveNow']==1) echo  'checked'; }  else if($bookingformdata['approved_admin']==1){echo 'checked';} ?> name="approveNow" id="approveNow" value="<?php if(isset($data['approveNow'])){ echo $data['approveNow']; } else if(isset($bookingformdata['approved_admin'])){echo $bookingformdata['approved_admin'];} else{echo 1;}?>"><span></span></label> Kinnita kohe
+						<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega</u>
 
 											
                         
@@ -375,7 +375,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 										} ?>&date=<?php if(isset($data['workoutDate'])){ echo $data['workoutDate'][0];} else if(isset($_GET["startDate"])){echo $_GET["startDate"];}else{ echo date("d.m.yy");}?>" >Katkesta</a>
 							
 							
-							<input class="btn btn-custom col-12 col-sm-3 text-white txt-xl" type="submit"  id="checkForOnceConflicts" value="Broneeri">
+							<input class="btn btn-custom col-12 col-sm-3 text-white txt-xl" type="submit"  id="checkForOnceConflicts" value="Esita päring">
 						
 						<button id="loadingTemporarlyButtonOnce" class="d-none btn btn-custom text-white txt-xl" type="button" disabled>
 							<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -394,7 +394,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                         <div class="row d-flex px-md-5 mx-md-5 mt-4">
                             <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 							<?php echo form_error('clubname'); ?>
-							<label class=" col-7 col-sm-7 col-md-12  p-0" for="contact">Klubi nimi (avalik info)<?php if($bookingformdata['clubname_admin']==1){echo "*";} ?> <b data-tooltip="Klubi puudumisel kirjuta kontaktisiku nime initsiaalid"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></b> <?php if($this->session->flashdata('validationErrorMessageForClubname')){  echo $this->session->flashdata('validationErrorMessageForClubname');} ?></label>
+							<label class=" col-7 col-sm-7 col-md-12  p-0" for="contact">Klubi nimi/korraldaja (avalik info)<?php if($bookingformdata['clubname_admin']==1){echo "*";} ?> <b data-tooltip="Klubi puudumisel kirjuta kontaktisiku nime initsiaalid"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="7%"></b> <?php if($this->session->flashdata('validationErrorMessageForClubname')){  echo $this->session->flashdata('validationErrorMessageForClubname');} ?></label>
 								<input class="form-control <?php if($this->session->flashdata('validationErrorMessageForClubname')){  echo 'is-invalid';} ?>" id="clubname" type="text" name="clubname" required value="<?php if(isset($data['clubname'])): echo $data['clubname'];endif; ?>">
 								
                             </div>
@@ -704,7 +704,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 <label>Lisainfo</label>
                                 <textarea class="form-control" id="comment2ForSingle" name="comment2" rows="3" placeholder="nt palun võrkpalli trenni jaoks eelnevalt üles seada võrk"><?php if(isset($data['comment2'])): echo $data['comment2'];endif; ?></textarea>
 							</div>
-							<label class="px-2"><input type="checkbox" <?php if($bookingformdata['approved_admin']==1){echo 'checked';} ?> name="approveNow" id="approvePeriodNow" value="<?php if(isset($bookingformdata['approved_admin'])){echo $bookingformdata['approved_admin'];} else{echo 1;}?>"><span></span></label> Kinnita kohe
+							<label class="px-2"><input type="checkbox" <?php if($bookingformdata['approved_admin']==1){echo 'checked';} ?> name="approveNow" id="approvePeriodNow" value="<?php if(isset($bookingformdata['approved_admin'])){echo $bookingformdata['approved_admin'];} else{echo 1;}?>"><span></span></label> Olen lugenud ja nõustus
                         </div>
 
                         <div class="row d-flex justify-content-end mt-5 px-md-5 mx-md-5">
