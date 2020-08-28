@@ -967,10 +967,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 		return true;
 	}
 	
-	// var textBox = document.getElementById('textBox');
-
-	// if(textBox.value != "")
-	// {
+	
 		$(document).ready(function() {
 	$("#checkbox1").on("change",function(){
 
@@ -986,7 +983,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 	});
 
 	});
-	// }
+	
 	
 
 	function onlyOne(checkbox) {
