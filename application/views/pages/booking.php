@@ -245,7 +245,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                             </div>
 						</div>
 
-						<label class="p-md-0 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showContractInfo('div1')"><span></span></label> Soovin sõlmida lepingu 
+						<label class="p-md-0 col-1 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showContractInfo('div1')"><span></span></label> Soovin sõlmida lepingu 
 
 						<div id="div1" style="display:none">
 							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Lepingu andmed</h4>
@@ -299,12 +299,12 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 								</div>
 							</div>
 							<div style="display:none"  id='wantCheck'>
-								<label class="p-md-0 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showPaymentInfo('paymentinfo')"><span></span></label> Soovin saada maksekviitungit &nbsp;&nbsp;
+								<label class="p-md-0 col-1 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showPaymentInfo('paymentinfo')"><span></span></label> Soovin saada maksekviitungit &nbsp;&nbsp;
 							</div>
 						
 						<div style='display:none;' id='paymentinfo'>
 							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Arve saaja andmed</h4>
-							<label class="p-md-0 mt-3 pl-md-5 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
+							<label class="p-md-0 mt-3 pl-md-5 col-1 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
 
 							<div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
 								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
@@ -339,7 +339,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 							</div>
 						</div>
 						<div>
-							<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega*</u>
+							<label class="p-md-0 col-1 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega*</u>
 						</div>
 
 						
