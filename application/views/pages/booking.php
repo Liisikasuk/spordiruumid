@@ -286,7 +286,8 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 								<div class="row mt-3 pl-4 px-md-5 mx-md-5">
 									<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
 										<select id="invoice" class="form-control arrow">
-										<option >Vali maksmisviis</option>
+										<!-- <option >Vali maksmisviis</option> -->
+										<option value="" disabled selected>Vali maksmisviis</option>
 										<option >sularaha kohapeal tasudes</option>
 										<option >pangakaart kohapeal tasudes</option>
 										<option value="1">arvega</option>
