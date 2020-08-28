@@ -304,7 +304,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 						
 						<div style='display:none;' id='paymentinfo'>
 							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Arve saaja andmed</h4>
-							<label class="p-md-0 mt-3 pl-md-5 col-1 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
+							<label class="p-md-0 mt-3 col-1 pl-md-5 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
 
 							<div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
 								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
@@ -339,7 +339,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 							</div>
 						</div>
 						<div>
-							<label class="p-md-0 col-1 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega*</u>
+							<label class="p-md-0 mt-5 col-1 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega*</u>
 						</div>
 
 						
@@ -937,6 +937,7 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/datepicker.js"></script>
 <script>
 
+
 	function showContractInfo(box) {
 		var chboxs = document.getElementById("div1").style.display;
 		var vis = "none";
@@ -965,8 +966,12 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 		}
 		return true;
 	}
+	
+	// var textBox = document.getElementById('textBox');
 
-	$(document).ready(function() {
+	// if(textBox.value != "")
+	// {
+		$(document).ready(function() {
 	$("#checkbox1").on("change",function(){
 
 	if (this.checked ) {
@@ -981,6 +986,8 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 	});
 
 	});
+	// }
+	
 
 	function onlyOne(checkbox) {
     var checkboxes = document.getElementsByName('check')
