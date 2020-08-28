@@ -238,11 +238,12 @@
                
                 <div class="modal overflow-hidden" id="imagemodal" tabindex="-1" role="dialog" style="position:fixed">
                     
-                    <img class="imagepreview modal-content p-2" style="width:90%; max-width:1500px; margin:auto; display:block;" src="">
+                    <img class="imagepreview modal-content p-2" style="width:85%; max-width:1500px; margin:auto; display:block;" src="">
                         
-                    <div class="modal-footer p-0 d-flex justify-content-center" style="border:none; bottom:2px">
+                    <div class="modal-footer p-0 d-flex justify-content-center bg-white" style="width:85%; max-width:1500px; margin:auto; border:none; bottom:2px">
                         <span class="close" data-dismiss="modal" style="position:right; font-weight:bold; color:black; font-size:50px">&times;</span>
                     </div>
+                    
                 </div>
 
             
