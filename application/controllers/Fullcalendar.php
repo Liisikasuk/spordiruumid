@@ -53,9 +53,9 @@ class Fullcalendar extends CI_Controller {
 						'typeID'	=>	$row['typeID'],
 						'color'	=>	$row['bookingTimeColor'],
 						'hasChanged'	=>	$row['hasChanged'],
-						
-
 					);
+
+					
 				}
 			}
 		} else {
@@ -83,9 +83,20 @@ class Fullcalendar extends CI_Controller {
 		if(!isset($data)){
 			//$data="Sorry, no data for you";
 		}
+
+		// Remove emptyes from array
+		$data = array_map('array_filter', $data);
+		$data = array_filter($data);
 		echo json_encode($data);
 	}
 
+
+	function countBookindTimes(){
+		
+		
+		print_r($this->fullcalendar_model->count_bookingTimes($this->input->post('bookingID')));
+
+	}
 
 	function insert()
 	{

@@ -56,13 +56,15 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                 <div id="mitmekordne" class="tab-pane center  <?php if(!isset($data['type'])){ echo 'active';}else if($data['type']==1){echo 'active';}; ?>">
                     <?php echo form_open('booking/createOnce', array('id' => 'myOnceForm')); ?>
 
-						<h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Asukoht ja treeningu tüüp</h4>
-                        <div class="row d-flex mt-4 px-md-5 mx-md-5">
+						<h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Päringu info</h4>
+						<div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
                             <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-                                <label for="sport_facilityOnce">Asutus</label>
+								<label class=" col-7 col-sm-7 col-md-12  p-0" for="sport_facilityOnce">Asutus</label>
                                 <input id="sport_facilityOnce" class="form-control" list="asutus" id="building" value="<?php $test = $this->session->userdata('building'); foreach ($buildings as $each) { $id = $each->id; $name = $each->name; if ($id == $test) {echo $each->name;}};?>" disabled>
-                            </div>
-                           <?php echo $this->input->get('roomId');?>
+								
+							</div>
+                            
+							<?php echo $this->input->get('roomId');?>
                             <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
                                 <label for="roomOnce">Ruum*</label><?php if($this->session->flashdata('sportroomMissing')){  echo $this->session->flashdata('sportroomMissing');} ?>
 								<select id="roomOnce"  onchange="addRoomInOnce()" list="saal" class="form-control arrow" >
@@ -100,13 +102,33 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 								</div>
 
                             </div>
-							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+                            
+                        </div>
+                        <div class="row d-flex mt-2 px-md-5 mx-md-5">
+                            <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
                                 <label>Ruumi kasutamise eesmärk</label>
                                 <input class="form-control" placeholder="nt jalgpall">
                             </div>
-							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
-								
-								<table class="col-4 ml-5 px-md-5">
+
+                            <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+								<label >Vali sihtgrupp</label>
+                                <select  class="form-control arrow">
+								<option >Vali sihtgrupp</option>
+								<option >Koolinoored (alla 20a)</option>
+								<option >Täiskasvanud</option>
+								<option >Seeniorid (alates 63a)</option>
+								<option >Eripopulatsioon</option>
+								</select>
+                            </div>
+						</div>
+						<div class="row d-flex mt-2 px-md-5 mx-md-5">
+                            <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+								<label>Inimeste arv kuni</label>
+                                <input class="form-control col-6" onkeypress="return isNumber(event)">
+                            </div>
+
+                            <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+								<table>
 									<tr>
 									<label>Treening on: </label>
 										<!-- <td>Treening on: </td> -->
@@ -119,9 +141,9 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 										<td>privaatne</td>
 									</tr>
 								</table>
-								
-							</div>
-                        </div>
+                            </div>
+						</div>
+                        
 						<h4 class="mt-5 txt-xl px-md-5 mx-md-5 ml-3">Lisainfo (valikuline) </h4>
 						<div class="mt-4 px-md-5 mx-md-5">
                             <div class="form-label-group pb-2 px-md-0 px-2">
@@ -184,18 +206,16 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 						<div class="pt-4 mb-4 px-md-5 mx-md-5 ml-3 col-10">
 							<table>
 								<tr>
-									<td>Treeningu ettevalmistamiseks kuluv aeg <b data-tooltip="Treeninguks ruumi ette valmistamine (varustuse ülespanek jne)"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="6%"></b></td>
-									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
-									<td>tund(i)</td>
+									<td>Treeningu ettevalmistamise algusaeg <b data-tooltip="Treeninguks ruumi ette valmistamine (varustuse ülespanek jne)"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="6%"></b></td>
+									<td><input type="input" class="clock pl-2 col-5 ml-5 pl-3 form-control" data-minimum="08:00" data-maximum="22:00"></td>
+									<!-- <td>tund(i)</td>
 									<td class="col-4 col-sm-2" ><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
-									<td>min</td>
+									<td>min</td> -->
 								</tr>
 								<tr>
-									<td>Treeningujärgsele koristamisele kuluv aeg</td>
-									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
-									<td>tund(i)</td>
-									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
-									<td>min</td>
+									<td>Treeningujärgse koristuse lõppaeg</td>
+									<td><input type="input" class="clock pl-2 col-5 ml-5 pl-3 form-control" data-minimum="08:00" data-maximum="22:00"></td>
+
 								</tr>
 							</table>
                        	</div>	
@@ -224,73 +244,64 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 <input class="form-control" id="emailForSingle" name="email" value="<?php if(isset($data['email'])){ echo $data['email'];} else  if($this->session->userdata('roleID')!='2' && $this->session->userdata('roleID')!='3'){echo $this->session->userdata('email');}; ?>">
                             </div>
 						</div>
-						<div class="row d-flex mt-2 px-md-5 mx-md-5">
-							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-							<label >Vali sihtgrupp</label>
-                                <select  class="form-control arrow">
-								<option >Vali sihtgrupp</option>
-								<option >Koolinoored (alla 20a)</option>
-								<option >Täiskasvanud</option>
-								<option >Seeniorid (alates 63a)</option>
-								<option >Eripopulatsioon</option>
-								</select>
-                            </div>
-							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
-                                <label>Inimeste arv kuni</label>
-                                <input class="form-control col-6" onkeypress="return isNumber(event)">
-                            </div>
-                                    
-                        </div>
 
-                        <h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Lepingu andmed</h4>
-                        <div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
-                            <div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-							
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Ettevõtte/eraisiku nimi</label>
-								<input class="form-control" id="text1">
-							</div>
-                            <div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Registrkood/isikukood</label>
-								<input class="form-control" id="text3" onkeypress="return isNumber(event)">
-                            </div>
-                        </div>
-						<div class="row d-flex mt-2 px-md-5 mx-md-5">
-							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Aadress</label>
-								<input class="form-control" id="text5">
-							</div>
-							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Kontaktisik</label>
-								<input class="form-control" id="text7">
-							</div>     
-                        </div>
-						<div class="row d-flex mt-2 px-md-5 mx-md-5">
-							<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Telefon</label>
-								<input class="form-control" id="text9" onkeypress="return isNumber(event)">
-							</div>
-							<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
-								<label class=" col-7 col-sm-7 col-md-12  p-0" >Email</label>
-								<input class="form-control" id="text11">
-							</div>     
-                        </div>
-						<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Maksmisviis</h4>
-						<div class="ml-3">
-							<div class="row mt-3 pl-4 px-md-5 mx-md-5">
+						<label class="p-md-0 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showContractInfo('div1')"><span></span></label> Soovin sõlmida lepingu 
+
+						<div id="div1" style="display:none">
+							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Lepingu andmed</h4>
+							<div class="row d-flex p-md-0 mt-4 px-md-5 mx-md-5">
 								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
-									<select id="payment" class="form-control arrow">
-									<option >Vali maksmisviis</option>
-									<option >sularaha kohapeal tasudes</option>
-									<option >pangakaart kohapeal tasudes</option>
-									<option value="1">arvega</option>
-									<option >ettemaks</option>
-									<option >muu</option>
-									</select>
-								</div>
 								
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Ettevõtte/eraisiku nimi</label>
+									<input class="form-control" id="text1">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Registrkood/isikukood</label>
+									<input class="form-control" id="text3" onkeypress="return isNumber(event)">
+								</div>
 							</div>
-                        </div>
-						<div style='display:none;' id='arvega'>
+							<div class="row d-flex mt-2 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Aadress</label>
+									<input class="form-control" id="text5">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Kontaktisik</label>
+									<input class="form-control" id="text7">
+								</div>     
+							</div>
+							<div class="row d-flex mt-2 px-md-5 mx-md-5">
+								<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Telefon</label>
+									<input class="form-control" id="text9" onkeypress="return isNumber(event)">
+								</div>
+								<div class="form-label-group col-12 col-md-6 p-md-0 pl-md-5">
+									<label class=" col-7 col-sm-7 col-md-12  p-0" >Email</label>
+									<input class="form-control" id="text11">
+								</div>     
+							</div>
+						</div>
+							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Maksmisviis</h4>
+							<div class="ml-3">
+								<div class="row mt-3 pl-4 px-md-5 mx-md-5">
+									<div class="form-label-group col-12 col-md-6 py-md-0 pl-md-0 pr-md-5">
+										<select id="invoice" class="form-control arrow">
+										<option >Vali maksmisviis</option>
+										<option >sularaha kohapeal tasudes</option>
+										<option >pangakaart kohapeal tasudes</option>
+										<option value="1">arvega</option>
+										<option >ettemaks</option>
+										<option >muu</option>
+										</select>
+									</div>
+									
+								</div>
+							</div>
+							<div style="display:none"  id='wantCheck'>
+								<label class="p-md-0 mt-4 pl-md-5 ml-md-5"><input type="checkbox" onchange="showPaymentInfo('paymentinfo')"><span></span></label> Soovin saada maksekviitungit &nbsp;&nbsp;
+							</div>
+						
+						<div style='display:none;' id='paymentinfo'>
 							<h4 class="pt-2 txt-xl px-md-5 mt-4 mx-md-5 ml-3">Arve saaja andmed</h4>
 							<label class="p-md-0 mt-3 pl-md-5 ml-md-5"><input type="checkbox" id="checkbox1"><span></span></label> Arve saaja andmed ühtivad lepingu sõlmija andmetega
 
@@ -326,9 +337,11 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 								</div>     
 							</div>
 						</div>
+						<div>
+							<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega*</u>
+						</div>
 
 						
-						<label class="p-md-0 mt-5 pl-md-5 ml-md-5"><input type="checkbox"><span></span></label> Olen lugenud ja nõustun <u class=text-primary>kasutustingimustega</u>
 
 											
                         
@@ -923,6 +936,26 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/datepicker.js"></script>
 <script>
 
+	function showContractInfo(box) {
+		var chboxs = document.getElementById("div1").style.display;
+		var vis = "none";
+			if(chboxs=="none"){
+			vis = "block"; }
+			if(chboxs=="block"){
+			vis = "none"; }
+		document.getElementById(box).style.display = vis;
+	}
+
+	function showPaymentInfo (box) {
+		var chboxs = document.getElementById("paymentinfo").style.display;
+		var vis = "none";
+			if(chboxs=="none"){
+			vis = "block"; }
+			if(chboxs=="block"){
+			vis = "none"; }
+		document.getElementById(box).style.display = vis;
+	}
+
 	function isNumber(evt) {
 		evt = (evt) ? evt : window.event;
 		var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -956,14 +989,27 @@ if(!empty($conflictDates)){// print_r($conflictDates);
 }
 
 	$(document).ready(function(){
-		$('#payment').on('change', function() {
+		$('#invoice').on('change', function() {
 		if ( this.value == '1')
 		{
-			$("#arvega").show();
+			$("#wantCheck").hide();
 		}
 		else
 		{
-			$("#arvega").hide();
+			$("#wantCheck").show();
+		}
+		});
+	});
+
+	$(document).ready(function(){
+		$('#invoice').on('change', function() {
+		if ( this.value == '1')
+		{
+			$("#paymentinfo").show();
+		}
+		else
+		{
+			$("#paymentinfo").hide();
 		}
 		});
 	});
