@@ -47,13 +47,13 @@
                             <a href="#broneeringutegemine" class="toc-link h5 text-primary">Broneeringu tegemine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronnimuutmine" class="toc-link h5 text-primary">Olemasoleva broneeringu muutmine</a>
+                            <a href="#broneeringumuutmine" class="toc-link h5 text-primary">Olemasoleva broneeringu muutmine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronniliigutamine" class="toc-link h5 text-primary">Kalendrivaates broneeringute liigutamine</a>
+                            <a href="#broneeringuliigutamine" class="toc-link h5 text-primary">Kalendrivaates broneeringute liigutamine</a>
                             </li>
                             <li class="h5"><span class="toc-item-body">
-                            <a href="#bronnikustutamine" class="toc-link h5 text-primary">Broneeringu kustutamine</a>
+                            <a href="#broneeringukustutamine" class="toc-link h5 text-primary">Broneeringu kustutamine</a>
                             </li>
                         </div>
                     </ul>
@@ -171,7 +171,7 @@
                         <p class="mx-5 col-10 mt-3" style="font-size:16px"> Sellist broneeringut saab salvestada või muuta. Kui veateateid ei ole viiakse kasutaja otse 
                         kalendrivaatesse tagasi. </p>
                     </div>
-                    <u><h4 class="mx-5 mt-5" id="bronnimuutmine"> Olemasoleva broneeringu muutmine: </h4></u>
+                    <u><h4 class="mx-5 mt-5" id="broneeringumuutmine"> Olemasoleva broneeringu muutmine: </h4></u>
                     <div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
@@ -202,7 +202,7 @@
                             <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
                         </div>
                     </div>
-                    <u><h4 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
+                    <u><h4 class="mx-5 mt-5" id="broneeringuliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
                     <div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Seotud broneeringu lisamiseks tuleb all hoida klahvi
@@ -221,7 +221,7 @@
                         </div>
 
                     </div>
-                    <u><h4 class="mx-5 mt-5" id="bronnikustutamine"> Broneeringu kustutamine: </h4></u>
+                    <u><h4 class="mx-5 mt-5" id="broneeringukustutamine"> Broneeringu kustutamine: </h4></u>
                     <div class="pop" >
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu kustutamiseks klõpsa broneeringu peal. Avanenud modaalaknas vali, kas tahad kustutada kõik
@@ -236,9 +236,9 @@
                 
                 </div>
                
-                <div class="modal" id="imagemodal" tabindex="-1" role="dialog" style="position:fixed">
+                <div class="modal overflow-hidden" id="imagemodal" tabindex="-1" role="dialog" style="position:fixed">
                     
-                    <img class="imagepreview modal-content p-3" style="width:90%; max-width:1500px; margin:auto; display:block;" src="">
+                    <img class="imagepreview modal-content p-2" style="width:90%; max-width:1500px; margin:auto; display:block;" src="">
                         
                     <div class="modal-footer p-0 d-flex justify-content-center" style="border:none; bottom:2px">
                         <span class="close" data-dismiss="modal" style="position:right; font-weight:bold; color:black; font-size:50px">&times;</span>
@@ -258,87 +258,6 @@
     //     $(this).scrollTop(0);
     // });
 
-
-    // var modal = document.getElementById("myModal");
-
-    // var img1 = document.getElementById("myImg1");
-    // var img2 = document.getElementById("myImg2");
-    // var img3 = document.getElementById("myImg3");
-    // var img4 = document.getElementById("myImg4");
-    // var img5 = document.getElementById("myImg5");
-    // var img6 = document.getElementById("myImg6");
-    // var img7 = document.getElementById("myImg7");
-    // var img8 = document.getElementById("myImg8");
-    // var img9 = document.getElementById("myImg9");
-    // var img10 = document.getElementById("myImg10");
-    // var img11 = document.getElementById("myImg11");
-    // var modalImg = document.getElementById("img01");
-    // img1.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img2.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img3.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img4.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img5.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img6.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img7.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img8.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img9.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img10.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-    // img11.onclick = function(){
-    // modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
-    // }
-
-    // var span = document.getElementsByClassName("close")[0];
-
-    // span.onclick = function() {
-    // modal.style.display = "none";
-    // }
-
-//     $("#pop").on("click", function() {
-//    $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
-//    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
-// });
 
 $(function() {
 		$('.pop').on('click', function() {
