@@ -88,7 +88,7 @@
                 <div>
                 </div>
                     <h4 class="mx-5 mb-5 mt-5 font-weight-bold" id="broneeringud">Broneeringud</h4>
-                    <div class="mx-5 mt-5">
+                    <div class="mx-5 mt-5 pop">
                         <p style="font-size:16px">Selles vaates tekivad automaatselt kõik kalendrisse sisetatud
                         broneeringud tabeli kujul. Tabelist saab broneeringuid otsida märksõnaga. Samuti saab
                         broneeringuid kuupäeva järgi filtreerida.</p>
@@ -105,7 +105,7 @@
                         soovitakse teiste eest peita (saun, majutus, konverentsiruum vms). Sellisel juhul saab ruume
                         teiste kasutajate eest ära peita, kuid asutuse administraatorid saavad ruumide kalendreid endiselt hallata</p>
                     </div>
-                    <div class="mx-5 mt-5">
+                    <div class="mx-5 mt-5 pop">
                         <p style="font-size:16px"><u id="broneerimisvorm" style="font-size:16px">Broneerimisvormi sätted</u> - kõige pealt saab asutus
                         seadistada kohustuslikud väljad administraatorile. Seejärel, kui asutuse poolt on tavakasutajate
                         broneerimine lubatud, siis avanevad tavakasutaja vormi sätted. Iga asutus saab valida, mis väljad
@@ -140,19 +140,27 @@
                         Broneeringul klikkides avaneb vasakul modaalaken, kus  näeb broneeringuga seotud infot.
                         Modaalaknas saab sakke kokku pakkida, kui nendel vajutada:
                         
-                        </p><img class="mx-2 mt-5 mb-4 col-sm-12" src="<?php echo base_url(); ?>assets/img/modalwindowPacking.gif">
+                        </p>
+                        <div class="pop">
+                            <img class="mx-2 mt-5 mb-4 col-sm-12" src="<?php echo base_url(); ?>assets/img/modalwindowPacking.gif">
+                        </div>
                     </div>
 
                     <u><h4 class="mx-5 mt-5" id="broneeringutegemine"> Broneeringu tegemine: </h4></u>
                     <div> 
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu tegemiseks valige hiirega otse kalendris sobiv kuupäev ja ajavahemik: </p>
-                        <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
+                        <div class="pop">
+                            <img class="mx-2 mt-5 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/makingReservation.gif"></p>
+                        </div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         või vajutage üleval paremal olevat nuppu "Uus broneering". Peale seda viiakse Teid broneeringu
                         tegemise lehele, kus saate valida millist broneeringut Te teha soovite, kas ühekordne,
                         hooajaline või suletud:
-                        </p> <img class="mx-2 mt-5 mb-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/chooseReservation.gif">
+                        </p>
+                        <div class="pop">
+                            <img class="mx-2 mt-5 mb-3 col-sm-12" src="<?php echo base_url(); ?>assets/img/chooseReservation.gif">
+                        </div>
                         
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Täitke väljad ja vajutage "Broneeri". Kattuvate aegade puhul antakse Teile 
@@ -168,13 +176,18 @@
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Modaalaknas asuvad broneeringute muutmise nupud. Märgistage broneeringud, mida soovite
                         muuta. Seejärel vajutage nuppu "muuda valitud" </p>
-                        <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
+                        <div class="pop">
+                            <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeReservation.gif"></p>
+                        </div>
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Tervet hooajalist broneeringut saab muuta korraga, kui vajutada nuppu "Muuda hooajaliselt".
                         Valige üks päev, millisest alates Te soovite hooajalist broneeringut muuta. Süsteem tuvastab kõik
                         tulevased valitud nädalapäeva ja kellaaegadega broneeringud ning seejärel viiakse kasutaja
                         broneeringu muutmise vaatesse.
-                        </p> <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
+                        </p> 
+                        <div class="pop">
+                            <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeSeasonal.gif">
+                        </div>
                         
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu muutmisvaates kuvatakse kattuvaid aegu ainult tuleviku kohta. Broneeringu muudatuse salvestamisel
@@ -184,7 +197,10 @@
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Iga muudatuse tagajärjel küsitakse muutmise põhjust ning sellest tekib logi. Logi näeb
                         modaalaknas: 
-                        </p><img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
+                        </p>
+                        <div class="pop">
+                            <img class="mx-2 mt-4 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/changeInfo.gif">
+                        </div>
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronniliigutamine"> Kalendrivaates broneeringute liigutamine: </h4></u>
                     <div>
@@ -192,38 +208,46 @@
                         Seotud broneeringu lisamiseks tuleb all hoida klahvi
                         <img class="col-sm-2" src="<?php echo base_url(); ?>assets/img/shift.jpg"> 
                         ja samal ajal lohistada broneeringut: </p>
-                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingWithShift.gif"></p>
+                        <div class="pop">
+                            <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingWithShift.gif"></p>
+                        </div>
+
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Kalendris saab broneeringuid muule ajale ja kuupäevale lohistada või broneeringu alt otsast
                         kinni võttes broneeringu aega pikemaks/lühemaks teha:
-                        </p> <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingReservation.gif">
+                        </p> 
+                        <div class="pop">
+                            <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/movingReservation.gif">
+                        </div>
+
                     </div>
                     <u><h4 class="mx-5 mt-5" id="bronnikustutamine"> Broneeringu kustutamine: </h4></u>
-                    <div>
+                    <div class="pop" >
                         <p class="mx-5 col-10 mt-5" style="font-size:16px">
                         Broneeringu kustutamiseks klõpsa broneeringu peal. Avanenud modaalaknas vali, kas tahad kustutada kõik
                         seotud broneerinud (selleks tee linnuke "VALI KÕIK" ette), ainult selle ühe valitud broneeringu
                         (mille peal kalendrivaates klõpsasid) või mitu broneeringut (selleks klõpsa linnuke nende kuupäevade
                         ja broneeringute ette, mida soovid kustutada):
-                        </p> <img id="myImg" class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
-                        <div id="myModal" class="modal" style="background-color:rgb(0,0,0); position:fixed">
+                        </p> 
+                        <img class="mx-2 mt-3 mb-5 col-sm-12" src="<?php echo base_url(); ?>assets/img/deleteReservation.gif">
 
-                            <!-- The Close Button -->
-                            <span class="close" style="position:absolute; font-weight:bold; top:10px; right: 25px; color:#f1f1f1; font-size:50px">&times;</span>
-
-                            <!-- Modal Content (The Image) -->
-                            <img class="modal-content" style="width:90%; max-width:1500px; margin:auto; display:block" id="img01">
-
-                        </div>
+                        
                     </div>
                 
                 </div>
-                
-                
+               
+                <div class="modal" id="imagemodal" tabindex="-1" role="dialog" style="position:fixed">
+                    
+                    <img class="imagepreview modal-content p-3" style="width:90%; max-width:1500px; margin:auto; display:block;" src="">
+                        
+                    <div class="modal-footer p-0 d-flex justify-content-center" style="border:none; bottom:2px">
+                        <span class="close" data-dismiss="modal" style="position:right; font-weight:bold; color:black; font-size:50px">&times;</span>
+                    </div>
+                </div>
 
             
 
-        </div>
+            </div>
 			
 		</div>
 	</div>
@@ -234,24 +258,95 @@
     //     $(this).scrollTop(0);
     // });
 
-    var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
+    // var modal = document.getElementById("myModal");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // var img1 = document.getElementById("myImg1");
+    // var img2 = document.getElementById("myImg2");
+    // var img3 = document.getElementById("myImg3");
+    // var img4 = document.getElementById("myImg4");
+    // var img5 = document.getElementById("myImg5");
+    // var img6 = document.getElementById("myImg6");
+    // var img7 = document.getElementById("myImg7");
+    // var img8 = document.getElementById("myImg8");
+    // var img9 = document.getElementById("myImg9");
+    // var img10 = document.getElementById("myImg10");
+    // var img11 = document.getElementById("myImg11");
+    // var modalImg = document.getElementById("img01");
+    // img1.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img2.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img3.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img4.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img5.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img6.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img7.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img8.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img9.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img10.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
+    // img11.onclick = function(){
+    // modal.style.display = "block";
+    // modalImg.src = this.src;
+    // captionText.innerHTML = this.alt;
+    // }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // var span = document.getElementsByClassName("close")[0];
+
+    // span.onclick = function() {
+    // modal.style.display = "none";
+    // }
+
+//     $("#pop").on("click", function() {
+//    $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+//    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+// });
+
+$(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');   
+		});		
+});
+
 
 </script>
 
