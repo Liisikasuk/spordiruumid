@@ -1,3 +1,4 @@
+
 <?php if(!isset($rooms)){
 			$this->session->set_flashdata('access_deniedToUrl', 'Sellist ruumi ei eksisteeri. Teid suunati avalehele');
 			redirect('');
@@ -76,7 +77,7 @@
 			<div class="col-sm-8  col-lg-5 col-xl-4 mr-auto p-0">
 				<div class="col-1  col-sm-12 col-xl-2">	</div>
 				<a id="allCalenderLink" class="text-center py-2 px-sm-2 px-lg-5 px-md-4 float-right pluss" href="<?php echo base_url(); ?>/allbookings/weekView/?date=">Kõik ruumid</a>
-				<a class="col-12 col-lg-6 col-sm-8 btn btn-custom text-white text-center py-2 px-sm-2 px-lg-4 px-md-4 float-right pluss" href="<?php echo base_url(); ?>booking/create/<?php echo ($this->input->get('roomId')); ?>">
+				<a class="col-12 col-lg-6 col-sm-8 btn btn-custom text-white text-center py-2 px-sm-2 px-lg-4 px-md-4 float-right pluss" href="<?php echo base_url(); ?>booking/create/">
 					<p class="m-0 txt-lg txt-strong text-center">Uus broneering</p>
 				</a>
 			<?php  } elseif ($this->session->userdata('session_id') === TRUE) { ?>
@@ -457,7 +458,12 @@
 				}
 
 				if (event.takesPlace == false) {
-					element.find('.fc-content').after('<span class="notice notice-error">Ei toimunud</span>');
+					
+				//	console.log((event.start).isAfter());
+					if((event.start).isAfter()){
+						element.find('.fc-content').after('<span class="notice notice-error">Ei toimu</span>');
+					}
+					else{element.find('.fc-content').after('<span class="notice notice-error">Ei toimunud</span>');}
 				}
 	
 
@@ -881,8 +887,10 @@
 			var selectedRoomID = $('#saal  option').filter(function() {
 					return $('#room').val();
 					}).data('value');
-			if ($('.abc:checked').length == $('.abc').length) {
-
+			var countSelected;
+			$.post("<?php echo base_url(); ?>fullcalendar/countBookindTimes/", { bookingID: $('input:checkbox:checked').parents("tbody").attr('id') } )
+			.done(function( data ) {
+			if ($('.abc:checked').length == $('.abc').length && $('.abc').length == data) {
 				swal({
 					title:  "Oled kindel kustutada kogu broneeringu?",
 					buttons: {
@@ -919,7 +927,7 @@
 						$(".message").delay(2000).fadeOut(1000);
 					}
 				});
-				calendar.fullCalendar('refetchEvents');
+				setTimeout(function(){calendar.fullCalendar('refetchEvents'); }, 200);
 						$.ajax({
 							url: "<?php echo base_url(); ?>fullcalendar/getUnapprovedBookings",
 							success: function(res) {
@@ -931,7 +939,7 @@
 						event.preventDefault();
 
 
-			} else if ($('.abc:checked').length < $('.abc').length && $('.abc:checked').length > 0) {
+			} else if ($('.abc:checked').length <= $('.abc').length && $('.abc:checked').length > 0) {
 				
 				swal({
 					title:  "Oled kindel, et soovid kustutada valitud ajad?",
@@ -971,7 +979,7 @@
 						});
 					}
 				});
-				calendar.fullCalendar('refetchEvents');
+				setTimeout(function(){calendar.fullCalendar('refetchEvents'); }, 200);
 								$.ajax({
 									url: "<?php echo base_url(); ?>fullcalendar/getUnapprovedBookings",
 									success: function(res) {
@@ -993,8 +1001,8 @@
 					})
 				event.preventDefault();
 			}
-
-		
+		});
+			event.preventDefault();
 
 
 		});
@@ -1086,7 +1094,7 @@
 										$('.badge.badge-danger').text(res);
 									}
 						});
-						calendar.fullCalendar('refetchEvents');
+						setTimeout(function(){calendar.fullCalendar('refetchEvents'); }, 200);
 					}, 200);
 						if(value){
 						//	swal.close();
@@ -1180,7 +1188,7 @@
 									});
 								}
 							});
-							calendar.fullCalendar('refetchEvents');
+							setTimeout(function(){calendar.fullCalendar('refetchEvents'); }, 200);
 									}, 200);
 
 									
