@@ -181,13 +181,13 @@ if(!empty($conflictDates)){// print_r($conflictDates);
                                 </div>
                             </div>
                         </div>
-						<div class="pt-4 txt-xl mb-4 px-md-5 mx-md-5 ml-3 col-10">
+						<div class="pt-4 mb-4 px-md-5 mx-md-5 ml-3 col-10">
 							<table>
 								<tr>
 									<td>Treeningu ettevalmistamiseks kuluv aeg <b data-tooltip="Treeninguks ruumi ette valmistamine (varustuse ülespanek jne)"><img id="tool" class="mr-5" src="<?php echo base_url(); ?>assets/img/icon-info.svg" width="6%"></b></td>
-									<td class="col-2 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
+									<td class="col-4 col-sm-2"><input type="input" onkeypress="return isNumber(event)" class="form-control" style="text-align:right"></td>
 									<td>tund(i)</td>
-									<td class="col-2 col-sm-2" ><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
+									<td class="col-4 col-sm-2" ><input type="input" onkeypress="return isNumber(event)" class="form-control" placeholder=30 style="text-align:right"></td>
 									<td>min</td>
 								</tr>
 								<tr>
